@@ -1,0 +1,1540 @@
+<patch-1.0 appVersion="1.0.12">
+   <comment type="patch/comment" x="14" y="14" text="DPad (X/Y/Push)"/>
+   <comment type="patch/comment" x="1820" y="14" text="Clock"/>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_1" x="14" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA0 (ADC1_IN0)"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="DPAD_X_UP_DOWN" x="154" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_1" x="266" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC0"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send b" uuid="b428934ee3ee80efb18736216fd871d264e9b695" name="DPAD_PRESS" x="364" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="sss/lfo/BPMext" uuid="7b90c9ef-c596-431d-a030-cf6c78757bca" name="BPMext_1" x="1820" y="28">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari1" value="8"/>
+         <int32 name="vari2" value="16"/>
+         <int32 name="vari3" value="2"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_11" x="2170" y="42">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB1"/>
+      </attribs>
+   </obj>
+   <obj type="osc/brds/blown" uuid="1185d86b-5be7-429f-8788-e26868c65a82" name="blown_1" x="2884" y="70">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="timbre" value="64.0"/>
+         <frac32.u.map name="color" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="3024" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" uuid="221f038da51943034a75e442c90624fcebfe6112" name="mix_1" x="3108" y="70">
+      <params>
+         <frac32.u.map name="gain1" value="32.0"/>
+         <frac32.u.map name="gain2" value="21.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="fx/lmnts/reverb" uuid="8027561C-A0B5-4DF8-A10E-3ED1274F2980" name="reverb_1" x="3248" y="70">
+      <params>
+         <frac32.u.map name="amount" value="28.5"/>
+         <frac32.u.map name="time" value="0.0"/>
+         <frac32.u.map name="diffusion" value="0.0"/>
+         <frac32.u.map name="gain" value="35.5"/>
+         <frac32.u.map name="lowpass" value="27.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_5" x="3374" y="70">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB1"/>
+      </attribs>
+   </obj>
+   <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_2" x="4284" y="70">
+      <params>
+         <frac32.u.map name="gain1" value="32.0"/>
+         <frac32.u.map name="gain2" value="32.0"/>
+         <frac32.u.map name="gain3" value="32.0"/>
+         <frac32.u.map name="gain4" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_6" x="4410" y="70">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="4564" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="4774" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_2" x="14" y="84">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA1 (ADC1_IN1)"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="DPAD_Y_LEFT_RIGHT" x="154" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="112" text="Three Button Bank."/>
+   <obj type="rbrt/math/scale" uuid="0ee2fe10-0178-4217-b4c1-c4c64338dcc0" name="scale_1" x="2702" y="112">
+      <params>
+         <frac32.u.map name="high" value="64.0"/>
+         <frac32.u.map name="low" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_3" x="3528" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_2" x="14" y="126">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC1"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_12" x="2170" y="126">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB2"/>
+      </attribs>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="154" y="140">
+      <params>
+         <int32 name="maximum" value="4"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_4" x="3528" y="182">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_3" x="14" y="196">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC2"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="1400" y="196">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_25" x="1470" y="196">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB1" x="1610" y="196">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_13" x="2170" y="210">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB3"/>
+      </attribs>
+   </obj>
+   <obj type="math/*" uuid="922423f2db9f222aa3e5ba095778288c446da47a" name="*_1" x="2506" y="210">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/ad" uuid="255cb0cd67470c7498f9c33b820facd26aa629ce" name="ad_1" x="2380" y="238">
+      <params>
+         <frac32.s.map name="a" value="-30.0"/>
+         <frac32.s.map name="d" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_5" x="588" y="252">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="0"/>
+      </attribs>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="1400" y="252">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_4" x="14" y="266">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC3"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_10" x="3108" y="266">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB4"/>
+      </attribs>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_6" x="588" y="308">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="1"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_2" x="1400" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_26" x="1470" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB2" x="1610" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1820" y="322" text="Midi Input"/>
+   <obj type="midi/in/keyb zone" uuid="e7413176a91acc060036fd7f68fda24bbee265d3" name="keyb_2" x="1820" y="336">
+      <params/>
+      <attribs>
+         <spinner attributeName="startNote" value="0"/>
+         <spinner attributeName="endNote" value="127"/>
+      </attribs>
+   </obj>
+   <obj type="disp/chart p" uuid="58f42040a894006a5f73ed8cb8d0bd45481b28cd" name="chart_1" x="2604" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="noise/pink" uuid="72c03a2468ee865f248733fcf9b12d4cf42b5a61" name="pink_1" x="2800" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_5" x="2884" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="filter/vcf3" uuid="92455c652cd098cbb682a5497baa18abbf2ef865" name="vcf3_1" x="2982" y="336">
+      <params>
+         <frac32.s.map name="pitch" value="-1.0"/>
+         <frac32.u.map name="reso" value="18.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_3" x="4284" y="336">
+      <params>
+         <frac32.u.map name="gain1" value="32.0"/>
+         <frac32.u.map name="gain2" value="32.0"/>
+         <frac32.u.map name="gain3" value="32.0"/>
+         <frac32.u.map name="gain4" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_7" x="4410" y="336">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_6" x="4564" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_8" x="3108" y="350">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB5"/>
+      </attribs>
+   </obj>
+   <comment type="patch/comment" x="14" y="364" text="Bottom Knob Bank"/>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_7" x="588" y="364">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="2"/>
+      </attribs>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_2" x="1400" y="364">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_6" x="14" y="378">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA2 (ADC1_IN2)"/>
+      </attribs>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_1" x="336" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/ad" uuid="255cb0cd67470c7498f9c33b820facd26aa629ce" name="ad_2" x="2184" y="406">
+      <params>
+         <frac32.s.map name="a" value="-34.0"/>
+         <frac32.s.map name="d" value="-6.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_8" x="588" y="420">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="3"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_3" x="1400" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_27" x="1470" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB3" x="1610" y="420">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="lfo/sine" uuid="75f7330c26a13953215dccc3b7b9008545c9daa9" name="sine_1" x="2730" y="420">
+      <params>
+         <frac32.s.map name="pitch" value="49.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/gain" uuid="6b4dd3da49f98e54900f6c20031f38f4624fa364" name="gain_1" x="2842" y="420">
+      <params>
+         <frac32.u.map name="amp" value="51.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_9" x="3108" y="434">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_3" x="1400" y="476">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_2" x="336" y="504">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_7" x="14" y="518">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA3 (ADC1_IN3)"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_4" x="1400" y="532">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_28" x="1470" y="532">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB4" x="1610" y="532">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/chart p" uuid="58f42040a894006a5f73ed8cb8d0bd45481b28cd" name="chart_2" x="3024" y="560">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_4" x="1400" y="588">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_3" x="336" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_5" x="1400" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_29" x="1470" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB5" x="1610" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_8" x="14" y="658">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA4 (ADC1_IN4)"/>
+      </attribs>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_9" x="1400" y="700">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="714" text="Tob Knob Bank"/>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_6" x="1400" y="756">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_30" x="1470" y="756">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB6" x="1610" y="756">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_4" x="336" y="784">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_3" x="14" y="798">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA5 (ADC1_IN5)"/>
+      </attribs>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_10" x="1400" y="812">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_7" x="1400" y="868">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_31" x="1470" y="868">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB1" x="1610" y="868">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_5" x="336" y="924">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_11" x="1400" y="924">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_4" x="14" y="938">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA6 (ADC1_IN6)"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_8" x="1400" y="980">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_32" x="1470" y="980">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB2" x="1610" y="980">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_12" x="1400" y="1036">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_6" x="336" y="1064">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_5" x="14" y="1078">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA7 (ADC1_IN7)"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_9" x="1400" y="1092">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_33" x="1470" y="1092">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB3" x="1610" y="1092">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_13" x="1400" y="1148">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_10" x="1400" y="1204">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_34" x="1470" y="1204">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB4" x="1610" y="1204">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_14" x="1400" y="1260">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="336" y="1274" text="DPad LEDs"/>
+   <obj type="patch/recv b" uuid="6ce86e0c667a0168b53a910eb891366e96b944d1" name="recv_2" x="182" y="1288">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_PRESS"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_5" x="336" y="1288">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB0"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_11" x="1400" y="1316">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_35" x="1470" y="1316">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB5" x="1610" y="1316">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="182" y="1372" text="Led Page Indicator States:"/>
+   <comment type="patch/comment" x="336" y="1372" text="Three Button Bank LEDs"/>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_15" x="1400" y="1372">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_6" x="336" y="1386">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB1"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <comment type="patch/comment" x="182" y="1400" text="Page 1: 1 0"/>
+   <comment type="patch/comment" x="182" y="1414" text="Page 2: 0 1"/>
+   <comment type="patch/comment" x="182" y="1428" text="Page 3: 1 1"/>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_12" x="1400" y="1428">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_36" x="1470" y="1428">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB6" x="1610" y="1428">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="182" y="1442" text="Page 0: 0 0"/>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_7" x="336" y="1456">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB8"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_5" x="182" y="1470">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_16" x="1400" y="1484">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_8" x="336" y="1526">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB9"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_6" x="182" y="1540">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_13" x="1400" y="1540">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_37" x="1470" y="1540">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB1" x="1610" y="1540">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_17" x="1400" y="1596">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="336" y="1652" text="Use DPad For Effects Control"/>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_14" x="1400" y="1652">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_38" x="1470" y="1652">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB2" x="1610" y="1652">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv b" uuid="6ce86e0c667a0168b53a910eb891366e96b944d1" name="recv_1" x="182" y="1666">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_PRESS"/>
+      </attribs>
+   </obj>
+   <obj type="logic/flipflop toggle" uuid="195e489e5fc3d275944b0de56c7a91c8641ea22a" name="flipflop_1" x="336" y="1666">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="448" y="1666">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_18" x="1400" y="1708">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_15" x="1400" y="1764">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_39" x="1470" y="1764">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB3" x="1610" y="1764">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_3" x="182" y="1778">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_X_UP_DOWN"/>
+      </attribs>
+   </obj>
+   <obj type="logic/samplehold" uuid="55479a62c4ed7e3536b6e6f339ce05a802a81b9d" name="samplehold_2" x="336" y="1778">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_5" x="434" y="1778">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_19" x="1400" y="1820">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_4" x="182" y="1876">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_Y_LEFT_RIGHT"/>
+      </attribs>
+   </obj>
+   <obj type="logic/samplehold" uuid="55479a62c4ed7e3536b6e6f339ce05a802a81b9d" name="samplehold_1" x="336" y="1876">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_6" x="434" y="1876">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_16" x="1400" y="1876">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_40" x="1470" y="1876">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB4" x="1610" y="1876">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_20" x="1400" y="1932">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_17" x="1400" y="1988">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_41" x="1470" y="1988">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB5" x="1610" y="1988">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_21" x="1400" y="2044">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_18" x="1400" y="2100">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_42" x="1470" y="2100">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB6" x="1610" y="2100">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_22" x="1400" y="2156">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_19" x="1400" y="2212">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_43" x="1470" y="2212">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB1" x="1610" y="2212">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_23" x="1400" y="2268">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_20" x="1400" y="2324">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_44" x="1470" y="2324">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB2" x="1610" y="2324">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_24" x="1400" y="2380">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_21" x="1400" y="2436">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_45" x="1470" y="2436">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB3" x="1610" y="2436">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_25" x="1400" y="2492">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_22" x="1400" y="2548">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_46" x="1470" y="2548">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB4" x="1610" y="2548">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_26" x="1400" y="2604">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_23" x="1400" y="2660">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_47" x="1470" y="2660">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB5" x="1610" y="2660">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_27" x="1400" y="2716">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_24" x="1400" y="2772">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_48" x="1470" y="2772">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB6" x="1610" y="2772">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_28" x="1400" y="2828">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="out_1" inlet="left"/>
+      </net>
+      <net>
+         <source obj="samplehold_1" outlet="out"/>
+         <dest obj="dial_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="flipflop_1" outlet="o"/>
+         <dest obj="samplehold_1" inlet="s_h"/>
+         <dest obj="samplehold_2" inlet="s_h"/>
+      </net>
+      <net>
+         <source obj="samplehold_2" outlet="out"/>
+         <dest obj="dial_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_1" outlet="o"/>
+         <dest obj="demux_1" inlet="s"/>
+         <dest obj="demux_2" inlet="s"/>
+         <dest obj="demux_3" inlet="s"/>
+         <dest obj="demux_4" inlet="s"/>
+         <dest obj="demux_5" inlet="s"/>
+         <dest obj="demux_6" inlet="s"/>
+         <dest obj="==_5" inlet="in"/>
+         <dest obj="==_6" inlet="in"/>
+         <dest obj="==_7" inlet="in"/>
+         <dest obj="==_8" inlet="in"/>
+      </net>
+      <net>
+         <source obj="or_5" outlet="o"/>
+         <dest obj="digital_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="or_6" outlet="o"/>
+         <dest obj="digital_7" inlet="in"/>
+      </net>
+      <net>
+         <source obj="analog_1" outlet="out"/>
+         <dest obj="DPAD_X_UP_DOWN" inlet="v"/>
+      </net>
+      <net>
+         <source obj="analog_2" outlet="out"/>
+         <dest obj="DPAD_Y_LEFT_RIGHT" inlet="v"/>
+      </net>
+      <net>
+         <source obj="digital_1" outlet="out"/>
+         <dest obj="DPAD_PRESS" inlet="v"/>
+      </net>
+      <net>
+         <source obj="analog_3" outlet="out"/>
+         <dest obj="demux_4" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_6" outlet="out"/>
+         <dest obj="demux_1" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_7" outlet="out"/>
+         <dest obj="demux_2" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_8" outlet="out"/>
+         <dest obj="demux_3" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_5" outlet="out"/>
+         <dest obj="demux_6" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_4" outlet="out"/>
+         <dest obj="demux_5" inlet="i"/>
+      </net>
+      <net>
+         <source obj="digital_3" outlet="out"/>
+         <dest obj="counter2_1" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="digital_4" outlet="out"/>
+         <dest obj="digital_8" inlet="in"/>
+         <dest obj="BPMext_1" inlet="reset"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o1"/>
+         <dest obj="gate_hold_31" inlet="in"/>
+         <dest obj="==_11" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o2"/>
+         <dest obj="==_17" inlet="in1"/>
+         <dest obj="gate_hold_37" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o3"/>
+         <dest obj="gate_hold_43" inlet="in"/>
+         <dest obj="==_23" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o3"/>
+         <dest obj="==_24" inlet="in1"/>
+         <dest obj="gate_hold_44" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o2"/>
+         <dest obj="==_18" inlet="in1"/>
+         <dest obj="gate_hold_38" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o1"/>
+         <dest obj="==_12" inlet="in1"/>
+         <dest obj="gate_hold_32" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o0"/>
+         <dest obj="==_2" inlet="in1"/>
+         <dest obj="gate_hold_26" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o0"/>
+         <dest obj="==_3" inlet="in1"/>
+         <dest obj="gate_hold_27" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o2"/>
+         <dest obj="==_19" inlet="in1"/>
+         <dest obj="gate_hold_39" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o3"/>
+         <dest obj="==_25" inlet="in1"/>
+         <dest obj="gate_hold_45" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o3"/>
+         <dest obj="==_26" inlet="in1"/>
+         <dest obj="gate_hold_46" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o2"/>
+         <dest obj="==_20" inlet="in1"/>
+         <dest obj="gate_hold_40" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o1"/>
+         <dest obj="==_14" inlet="in1"/>
+         <dest obj="gate_hold_34" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o0"/>
+         <dest obj="gate_hold_28" inlet="in"/>
+         <dest obj="==_4" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o0"/>
+         <dest obj="gate_hold_29" inlet="in"/>
+         <dest obj="==_9" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o1"/>
+         <dest obj="gate_hold_35" inlet="in"/>
+         <dest obj="==_15" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o2"/>
+         <dest obj="==_21" inlet="in1"/>
+         <dest obj="gate_hold_41" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o3"/>
+         <dest obj="==_27" inlet="in1"/>
+         <dest obj="gate_hold_47" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o3"/>
+         <dest obj="==_28" inlet="in1"/>
+         <dest obj="gate_hold_48" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o2"/>
+         <dest obj="==_22" inlet="in1"/>
+         <dest obj="gate_hold_42" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o1"/>
+         <dest obj="==_16" inlet="in1"/>
+         <dest obj="gate_hold_36" inlet="in"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o0"/>
+         <dest obj="==_10" inlet="in1"/>
+         <dest obj="gate_hold_30" inlet="in"/>
+      </net>
+      <net>
+         <source obj="==_5" outlet="out"/>
+         <dest obj="or_5" inlet="i1"/>
+         <dest obj="and_1" inlet="i1"/>
+         <dest obj="and_2" inlet="i1"/>
+         <dest obj="and_3" inlet="i1"/>
+         <dest obj="and_4" inlet="i1"/>
+         <dest obj="and_5" inlet="i1"/>
+         <dest obj="and_6" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="==_6" outlet="out"/>
+         <dest obj="or_6" inlet="i1"/>
+         <dest obj="and_7" inlet="i1"/>
+         <dest obj="and_8" inlet="i1"/>
+         <dest obj="and_9" inlet="i1"/>
+         <dest obj="and_10" inlet="i1"/>
+         <dest obj="and_11" inlet="i1"/>
+         <dest obj="and_12" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="==_7" outlet="out"/>
+         <dest obj="or_5" inlet="i2"/>
+         <dest obj="or_6" inlet="i2"/>
+         <dest obj="and_13" inlet="i1"/>
+         <dest obj="and_15" inlet="i1"/>
+         <dest obj="and_16" inlet="i1"/>
+         <dest obj="and_17" inlet="i1"/>
+         <dest obj="and_18" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="==_8" outlet="out"/>
+         <dest obj="and_14" inlet="i1"/>
+         <dest obj="and_19" inlet="i1"/>
+         <dest obj="and_20" inlet="i1"/>
+         <dest obj="and_21" inlet="i1"/>
+         <dest obj="and_22" inlet="i1"/>
+         <dest obj="and_23" inlet="i1"/>
+         <dest obj="and_24" inlet="i1"/>
+      </net>
+      <net>
+         <source obj="digital_2" outlet="out"/>
+         <dest obj="counter2_1" inlet="dec"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o0"/>
+         <dest obj="gate_hold_25" inlet="in"/>
+         <dest obj="==_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="gate_hold_25" outlet="out"/>
+         <dest obj="==_1" inlet="in2"/>
+         <dest obj="PAGE1_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_1" outlet="o"/>
+         <dest obj="gate_hold_25" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_1" outlet="out"/>
+         <dest obj="and_1" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_26" outlet="out"/>
+         <dest obj="==_2" inlet="in2"/>
+         <dest obj="PAGE1_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_2" outlet="o"/>
+         <dest obj="gate_hold_26" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_2" outlet="out"/>
+         <dest obj="and_2" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_27" outlet="out"/>
+         <dest obj="==_3" inlet="in2"/>
+         <dest obj="PAGE1_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_3" outlet="o"/>
+         <dest obj="gate_hold_27" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_3" outlet="out"/>
+         <dest obj="and_3" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_28" outlet="out"/>
+         <dest obj="==_4" inlet="in2"/>
+         <dest obj="PAGE1_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_4" outlet="o"/>
+         <dest obj="gate_hold_28" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_4" outlet="out"/>
+         <dest obj="and_4" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_29" outlet="out"/>
+         <dest obj="==_9" inlet="in2"/>
+         <dest obj="PAGE1_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_5" outlet="o"/>
+         <dest obj="gate_hold_29" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_9" outlet="out"/>
+         <dest obj="and_5" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_30" outlet="out"/>
+         <dest obj="==_10" inlet="in2"/>
+         <dest obj="PAGE1_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_6" outlet="o"/>
+         <dest obj="gate_hold_30" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_10" outlet="out"/>
+         <dest obj="and_6" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_31" outlet="out"/>
+         <dest obj="==_11" inlet="in2"/>
+         <dest obj="PAGE2_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_7" outlet="o"/>
+         <dest obj="gate_hold_31" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_11" outlet="out"/>
+         <dest obj="and_7" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_32" outlet="out"/>
+         <dest obj="==_12" inlet="in2"/>
+         <dest obj="PAGE2_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_8" outlet="o"/>
+         <dest obj="gate_hold_32" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_12" outlet="out"/>
+         <dest obj="and_8" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o1"/>
+         <dest obj="==_13" inlet="in1"/>
+         <dest obj="gate_hold_33" inlet="in"/>
+      </net>
+      <net>
+         <source obj="gate_hold_33" outlet="out"/>
+         <dest obj="==_13" inlet="in2"/>
+         <dest obj="PAGE2_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_9" outlet="o"/>
+         <dest obj="gate_hold_33" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_13" outlet="out"/>
+         <dest obj="and_9" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_34" outlet="out"/>
+         <dest obj="==_14" inlet="in2"/>
+         <dest obj="PAGE2_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_10" outlet="o"/>
+         <dest obj="gate_hold_34" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_14" outlet="out"/>
+         <dest obj="and_10" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_35" outlet="out"/>
+         <dest obj="==_15" inlet="in2"/>
+         <dest obj="PAGE2_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_11" outlet="o"/>
+         <dest obj="gate_hold_35" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_15" outlet="out"/>
+         <dest obj="and_11" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_36" outlet="out"/>
+         <dest obj="==_16" inlet="in2"/>
+         <dest obj="PAGE2_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_12" outlet="o"/>
+         <dest obj="gate_hold_36" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_16" outlet="out"/>
+         <dest obj="and_12" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_37" outlet="out"/>
+         <dest obj="==_17" inlet="in2"/>
+         <dest obj="PAGE3_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_13" outlet="o"/>
+         <dest obj="gate_hold_37" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_17" outlet="out"/>
+         <dest obj="and_13" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_38" outlet="out"/>
+         <dest obj="==_18" inlet="in2"/>
+         <dest obj="PAGE3_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_14" outlet="o"/>
+         <dest obj="gate_hold_38" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_18" outlet="out"/>
+         <dest obj="and_14" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_39" outlet="out"/>
+         <dest obj="==_19" inlet="in2"/>
+         <dest obj="PAGE3_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_15" outlet="o"/>
+         <dest obj="gate_hold_39" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_19" outlet="out"/>
+         <dest obj="and_15" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_40" outlet="out"/>
+         <dest obj="==_20" inlet="in2"/>
+         <dest obj="PAGE3_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_16" outlet="o"/>
+         <dest obj="gate_hold_40" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_20" outlet="out"/>
+         <dest obj="and_16" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_41" outlet="out"/>
+         <dest obj="==_21" inlet="in2"/>
+         <dest obj="PAGE3_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_17" outlet="o"/>
+         <dest obj="gate_hold_41" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_21" outlet="out"/>
+         <dest obj="and_17" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_42" outlet="out"/>
+         <dest obj="==_22" inlet="in2"/>
+         <dest obj="PAGE3_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_18" outlet="o"/>
+         <dest obj="gate_hold_42" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_22" outlet="out"/>
+         <dest obj="and_18" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_43" outlet="out"/>
+         <dest obj="==_23" inlet="in2"/>
+         <dest obj="PAGE4_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_19" outlet="o"/>
+         <dest obj="gate_hold_43" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_23" outlet="out"/>
+         <dest obj="and_19" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_44" outlet="out"/>
+         <dest obj="==_24" inlet="in2"/>
+         <dest obj="PAGE4_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_20" outlet="o"/>
+         <dest obj="gate_hold_44" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_24" outlet="out"/>
+         <dest obj="and_20" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_45" outlet="out"/>
+         <dest obj="==_25" inlet="in2"/>
+         <dest obj="PAGE4_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_21" outlet="o"/>
+         <dest obj="gate_hold_45" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_25" outlet="out"/>
+         <dest obj="and_21" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_46" outlet="out"/>
+         <dest obj="==_26" inlet="in2"/>
+         <dest obj="PAGE4_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_22" outlet="o"/>
+         <dest obj="gate_hold_46" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_26" outlet="out"/>
+         <dest obj="and_22" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_47" outlet="out"/>
+         <dest obj="==_27" inlet="in2"/>
+         <dest obj="PAGE4_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_23" outlet="o"/>
+         <dest obj="gate_hold_47" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_27" outlet="out"/>
+         <dest obj="and_23" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="gate_hold_48" outlet="out"/>
+         <dest obj="==_28" inlet="in2"/>
+         <dest obj="PAGE4_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="and_24" outlet="o"/>
+         <dest obj="gate_hold_48" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="==_28" outlet="out"/>
+         <dest obj="and_24" inlet="i2"/>
+      </net>
+      <net>
+         <source obj="recv_1" outlet="v"/>
+         <dest obj="flipflop_1" inlet="trig"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_2" outlet="v"/>
+         <dest obj="digital_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_3" outlet="v"/>
+         <dest obj="samplehold_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_4" outlet="v"/>
+         <dest obj="samplehold_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="keyb_2" outlet="note"/>
+         <dest obj="blown_1" inlet="pitch"/>
+         <dest obj="vcf3_1" inlet="pitch"/>
+         <dest obj="reverb_1" inlet="lowpass"/>
+      </net>
+      <net>
+         <source obj="keyb_2" outlet="gate"/>
+         <dest obj="blown_1" inlet="strike"/>
+         <dest obj="ad_1" inlet="trig"/>
+         <dest obj="ad_2" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="blown_1" outlet="wave"/>
+         <dest obj="vca_2" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_5" outlet="v"/>
+         <dest obj="vca_3" inlet="v"/>
+         <dest obj="vca_4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_2" outlet="o"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="ad_1" outlet="env"/>
+         <dest obj="vca_2" inlet="v"/>
+         <dest obj="*_1" inlet="b"/>
+      </net>
+      <net>
+         <source obj="*_1" outlet="result"/>
+         <dest obj="scale_1" inlet="in"/>
+         <dest obj="chart_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="scale_1" outlet="out"/>
+         <dest obj="blown_1" inlet="color"/>
+         <dest obj="chart_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="reverb_1" outlet="l"/>
+         <dest obj="vca_3" inlet="a"/>
+      </net>
+      <net>
+         <source obj="reverb_1" outlet="r"/>
+         <dest obj="vca_4" inlet="a"/>
+      </net>
+      <net>
+         <source obj="pink_1" outlet="out"/>
+         <dest obj="vca_5" inlet="a"/>
+      </net>
+      <net>
+         <source obj="ad_2" outlet="env"/>
+         <dest obj="vca_5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_5" outlet="o"/>
+         <dest obj="vcf3_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="reverb_1" inlet="l"/>
+         <dest obj="reverb_1" inlet="r"/>
+      </net>
+      <net>
+         <source obj="vcf3_1" outlet="out"/>
+         <dest obj="mix_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="sine_1" outlet="wave"/>
+         <dest obj="gain_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="gain_1" outlet="out"/>
+         <dest obj="vcf3_1" inlet="reso"/>
+      </net>
+      <net>
+         <source obj="mix_2" outlet="out"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_6" outlet="v"/>
+         <dest obj="vca_1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="mix_3" outlet="out"/>
+         <dest obj="vca_6" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_7" outlet="v"/>
+         <dest obj="vca_6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_6" outlet="o"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="vca_4" outlet="o"/>
+         <dest obj="mix_3" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="vca_3" outlet="o"/>
+         <dest obj="mix_2" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="recv_8" outlet="v"/>
+         <dest obj="reverb_1" inlet="amount"/>
+      </net>
+      <net>
+         <source obj="recv_9" outlet="v"/>
+         <dest obj="reverb_1" inlet="time"/>
+      </net>
+      <net>
+         <source obj="recv_10" outlet="v"/>
+         <dest obj="reverb_1" inlet="diffusion"/>
+      </net>
+      <net>
+         <source obj="recv_11" outlet="v"/>
+         <dest obj="*_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_12" outlet="v"/>
+         <dest obj="blown_1" inlet="timbre"/>
+      </net>
+      <net>
+         <source obj="recv_13" outlet="v"/>
+         <dest obj="reverb_1" inlet="gain"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>0</x>
+      <y>23</y>
+      <width>1917</width>
+      <height>1013</height>
+   </windowPos>
+</patch-1.0>

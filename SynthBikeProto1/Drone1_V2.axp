@@ -1,0 +1,1269 @@
+<patch-1.0 appVersion="1.0.12">
+   <comment type="patch/comment" x="14" y="14" text="DPad (X/Y/Push)"/>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_1" x="14" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA0 (ADC1_IN0)"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="DPAD_X_UP_DOWN" x="154" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_1" x="266" y="28">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC0"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send b" uuid="b428934ee3ee80efb18736216fd871d264e9b695" name="DPAD_PRESS" x="364" y="28">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1554" y="42" text="Midi Input"/>
+   <obj type="midi/in/keyb zone" uuid="e7413176a91acc060036fd7f68fda24bbee265d3" name="Voice1_Midi_In" x="1554" y="56">
+      <params/>
+      <attribs>
+         <spinner attributeName="startNote" value="84"/>
+         <spinner attributeName="endNote" value="91"/>
+      </attribs>
+   </obj>
+   <obj type="fretnz/math/remap16" uuid="ebf175d2-353f-4427-a5cd-6d5a8a7e8491" name="remap16_1" x="1666" y="56">
+      <params>
+         <int32 name="in1" value="20"/>
+         <int32 name="out1" value="20"/>
+         <int32 name="in2" value="21"/>
+         <int32 name="out2" value="22"/>
+         <int32 name="in3" value="22"/>
+         <int32 name="out3" value="23"/>
+         <int32 name="in4" value="23"/>
+         <int32 name="out4" value="25"/>
+         <int32 name="in5" value="24"/>
+         <int32 name="out5" value="27"/>
+         <int32 name="in6" value="25"/>
+         <int32 name="out6" value="29"/>
+         <int32 name="in7" value="26"/>
+         <int32 name="out7" value="30"/>
+         <int32 name="in8" value="27"/>
+         <int32 name="out8" value="32"/>
+         <int32 name="in9" value="0"/>
+         <int32 name="out9" value="0"/>
+         <int32 name="in10" value="0"/>
+         <int32 name="out10" value="0"/>
+         <int32 name="in11" value="0"/>
+         <int32 name="out11" value="0"/>
+         <int32 name="in12" value="0"/>
+         <int32 name="out12" value="0"/>
+         <int32 name="in13" value="0"/>
+         <int32 name="out13" value="0"/>
+         <int32 name="in14" value="0"/>
+         <int32 name="out14" value="0"/>
+         <int32 name="in15" value="0"/>
+         <int32 name="out15" value="0"/>
+         <int32 name="in16" value="0"/>
+         <int32 name="out16" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_11" x="2310" y="56">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB1"/>
+      </attribs>
+   </obj>
+   <obj type="rbrt/math/scale" uuid="0ee2fe10-0178-4217-b4c1-c4c64338dcc0" name="scale_1" x="2716" y="70">
+      <params>
+         <frac32.u.map name="high" value="64.0"/>
+         <frac32.u.map name="low" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/brds/blown" uuid="1185d86b-5be7-429f-8788-e26868c65a82" name="blown_1" x="2884" y="70">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="timbre" value="64.0"/>
+         <frac32.u.map name="color" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="3024" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="fx/lmnts/reverb" uuid="8027561C-A0B5-4DF8-A10E-3ED1274F2980" name="reverb_1" x="3248" y="70">
+      <params>
+         <frac32.u.map name="amount" value="28.5"/>
+         <frac32.u.map name="time" value="0.0"/>
+         <frac32.u.map name="diffusion" value="0.0"/>
+         <frac32.u.map name="gain" value="35.5"/>
+         <frac32.u.map name="lowpass" value="27.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_5" x="3374" y="70">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB1"/>
+      </attribs>
+   </obj>
+   <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_2" x="4284" y="70">
+      <params>
+         <frac32.u.map name="gain1" value="32.0"/>
+         <frac32.u.map name="gain2" value="32.0"/>
+         <frac32.u.map name="gain3" value="32.0"/>
+         <frac32.u.map name="gain4" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_6" x="4410" y="70">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="4564" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="4774" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_2" x="14" y="84">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA1 (ADC1_IN1)"/>
+      </attribs>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="DPAD_Y_LEFT_RIGHT" x="154" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="112" text="Three Button Bank."/>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_3" x="3528" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_2" x="14" y="126">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC1"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="154" y="140">
+      <params>
+         <int32 name="maximum" value="4"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_5" x="490" y="140">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="0"/>
+      </attribs>
+   </obj>
+   <comment type="patch/comment" x="1344" y="140" text="Clock"/>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_12" x="2310" y="140">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB2"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob1" x="1008" y="154">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB1" x="1176" y="154">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="sss/lfo/BPMext" uuid="7b90c9ef-c596-431d-a030-cf6c78757bca" name="BPMext_1" x="1344" y="154">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari1" value="8"/>
+         <int32 name="vari2" value="16"/>
+         <int32 name="vari3" value="24"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_10" x="3024" y="154">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB4"/>
+      </attribs>
+   </obj>
+   <obj type="math/*" uuid="922423f2db9f222aa3e5ba095778288c446da47a" name="*_1" x="2534" y="168">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_4" x="3528" y="182">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_3" x="14" y="196">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC2"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_6" x="490" y="196">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="1"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob2" x="1008" y="210">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB2" x="1176" y="210">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_13" x="2310" y="224">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB3"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_8" x="3024" y="238">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB5"/>
+      </attribs>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_7" x="490" y="252">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="2"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_4" x="14" y="266">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PC3"/>
+         <combo attributeName="mode" selection="pulldown"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob3" x="1008" y="266">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB3" x="1176" y="266">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_8" x="490" y="308">
+      <params/>
+      <attribs>
+         <spinner attributeName="value" value="3"/>
+      </attribs>
+   </obj>
+   <obj type="env/ad" uuid="255cb0cd67470c7498f9c33b820facd26aa629ce" name="ad_1" x="2310" y="308">
+      <params>
+         <frac32.s.map name="a" value="-30.0"/>
+         <frac32.s.map name="d" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob4" x="1008" y="322">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB4" x="1176" y="322">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_9" x="3024" y="322">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE1_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_3" x="4284" y="336">
+      <params>
+         <frac32.u.map name="gain1" value="32.0"/>
+         <frac32.u.map name="gain2" value="32.0"/>
+         <frac32.u.map name="gain3" value="32.0"/>
+         <frac32.u.map name="gain4" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_7" x="4410" y="336">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_6" x="4564" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="364" text="Bottom Knob Bank"/>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_6" x="14" y="378">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA2 (ADC1_IN2)"/>
+      </attribs>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_1" x="336" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob5" x="1008" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB5" x="1176" y="378">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page1_Latch_Knob6" x="1008" y="434">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE1_KNOB6" x="1176" y="434">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_2" x="336" y="504">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_7" x="14" y="518">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA3 (ADC1_IN3)"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob1" x="1008" y="518">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB1" x="1176" y="518">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob2" x="1008" y="574">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB2" x="1176" y="574">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_15" x="2660" y="602">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB1"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_14" x="3318" y="616">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE4_KNOB2"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_5" x="3542" y="616">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob3" x="1008" y="630">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB3" x="1176" y="630">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_3" x="336" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_8" x="14" y="658">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA4 (ADC1_IN4)"/>
+      </attribs>
+   </obj>
+   <obj type="osc/brds/struckbell" uuid="7dc99f76-9a23-4faf-a6da-3654cd168670" name="struckbell_1" x="2996" y="672">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="timbre" value="27.0"/>
+         <frac32.u.map name="color" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_8" x="3192" y="672">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob4" x="1008" y="686">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB4" x="1176" y="686">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_16" x="2660" y="686">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB2"/>
+      </attribs>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_7" x="3542" y="686">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb zone" uuid="e7413176a91acc060036fd7f68fda24bbee265d3" name="Voice2_Midi_In" x="1554" y="700">
+      <params/>
+      <attribs>
+         <spinner attributeName="startNote" value="92"/>
+         <spinner attributeName="endNote" value="99"/>
+      </attribs>
+   </obj>
+   <obj type="fretnz/math/remap16" uuid="ebf175d2-353f-4427-a5cd-6d5a8a7e8491" name="remap16_2" x="1666" y="700">
+      <params>
+         <int32 name="in1" value="32"/>
+         <int32 name="out1" value="32"/>
+         <int32 name="in2" value="33"/>
+         <int32 name="out2" value="34"/>
+         <int32 name="in3" value="34"/>
+         <int32 name="out3" value="35"/>
+         <int32 name="in4" value="35"/>
+         <int32 name="out4" value="37"/>
+         <int32 name="in5" value="36"/>
+         <int32 name="out5" value="39"/>
+         <int32 name="in6" value="37"/>
+         <int32 name="out6" value="41"/>
+         <int32 name="in7" value="38"/>
+         <int32 name="out7" value="42"/>
+         <int32 name="in8" value="39"/>
+         <int32 name="out8" value="44"/>
+         <int32 name="in9" value="0"/>
+         <int32 name="out9" value="0"/>
+         <int32 name="in10" value="0"/>
+         <int32 name="out10" value="0"/>
+         <int32 name="in11" value="0"/>
+         <int32 name="out11" value="0"/>
+         <int32 name="in12" value="0"/>
+         <int32 name="out12" value="0"/>
+         <int32 name="in13" value="0"/>
+         <int32 name="out13" value="0"/>
+         <int32 name="in14" value="0"/>
+         <int32 name="out14" value="0"/>
+         <int32 name="in15" value="0"/>
+         <int32 name="out15" value="0"/>
+         <int32 name="in16" value="0"/>
+         <int32 name="out16" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="drj/delay/delay_st_pp_mod_sync" uuid="c2ae7a1c-1db8-4879-b013-802cfacc19cc" name="obj_1" x="3318" y="700">
+      <params>
+         <bool32.tgl name="pre_filter" value="1"/>
+         <frac32.u.map name="lp" value="54.5"/>
+         <frac32.u.map name="hp" value="7.5"/>
+         <bool32.tgl name="hp_enable" value="1"/>
+         <frac32.u.map name="ping" value="54.0"/>
+         <frac32.u.map name="feedback" value="61.0"/>
+         <frac32.u.map name="time" value="8.0"/>
+         <frac32.s.map name="time_diff" value="0.0"/>
+         <frac32.u.map name="mod amt" value="0.0"/>
+         <frac32.s.map name="mod freq" value="0.0"/>
+         <frac32.s.map name="mod phase" value="0.0"/>
+         <frac32.u.map name="dry wet" value="32.0"/>
+         <int32 name="left:clockdiv" value="8"/>
+         <int32 name="right:clockdiv" value="8"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="714" text="Tob Knob Bank"/>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob5" x="1008" y="742">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB5" x="1176" y="742">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_17" x="2660" y="770">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB3"/>
+      </attribs>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_4" x="336" y="784">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/i" uuid="a3786816db6ea5bc6ac4193a5cccdb2c83b83496" name="i_1" x="3192" y="784">
+      <params>
+         <int32 name="value" value="8"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_3" x="14" y="798">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA5 (ADC1_IN5)"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page2_Latch_Knob6" x="1008" y="798">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE2_KNOB6" x="1176" y="798">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="env/ad" uuid="255cb0cd67470c7498f9c33b820facd26aa629ce" name="ad_2" x="2660" y="854">
+      <params>
+         <frac32.s.map name="a" value="-28.0"/>
+         <frac32.s.map name="d" value="5.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob1" x="1008" y="882">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB1" x="1176" y="882">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_18" x="2996" y="882">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB4"/>
+      </attribs>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_5" x="336" y="924">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_4" x="14" y="938">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA6 (ADC1_IN6)"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob2" x="1008" y="938">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB2" x="1176" y="938">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_19" x="2996" y="966">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB5"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob3" x="1008" y="994">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB3" x="1176" y="994">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob4" x="1008" y="1050">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB4" x="1176" y="1050">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_20" x="2996" y="1050">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="PAGE2_KNOB6"/>
+      </attribs>
+   </obj>
+   <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_6" x="336" y="1064">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_5" x="14" y="1078">
+      <params/>
+      <attribs>
+         <combo attributeName="channel" selection="PA7 (ADC1_IN7)"/>
+      </attribs>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob5" x="1008" y="1106">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB5" x="1176" y="1106">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1582" y="1148" text="Use DPad For Effects Control"/>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page3_Latch_Knob6" x="1008" y="1162">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE3_KNOB6" x="1176" y="1162">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/recv b" uuid="6ce86e0c667a0168b53a910eb891366e96b944d1" name="recv_1" x="1428" y="1162">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_PRESS"/>
+      </attribs>
+   </obj>
+   <obj type="logic/flipflop toggle" uuid="195e489e5fc3d275944b0de56c7a91c8641ea22a" name="flipflop_1" x="1582" y="1162">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="1694" y="1162">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page4_Latch_Knob1" x="1008" y="1246">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB1" x="1176" y="1246">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="168" y="1260" text="DPad LEDs"/>
+   <obj type="patch/recv b" uuid="6ce86e0c667a0168b53a910eb891366e96b944d1" name="recv_2" x="14" y="1274">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_PRESS"/>
+      </attribs>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_5" x="168" y="1274">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB0"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_3" x="1428" y="1274">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_X_UP_DOWN"/>
+      </attribs>
+   </obj>
+   <obj type="logic/samplehold" uuid="55479a62c4ed7e3536b6e6f339ce05a802a81b9d" name="samplehold_2" x="1582" y="1274">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_5" x="1694" y="1274">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page4_Latch_Knob2" x="1008" y="1302">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB2" x="1176" y="1302">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="1358" text="Led Page Indicator States:"/>
+   <comment type="patch/comment" x="168" y="1358" text="Three Button Bank LEDs"/>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page4_Latch_Knob3" x="1008" y="1358">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB3" x="1176" y="1358">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_6" x="168" y="1372">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB1"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="patch/recv f" uuid="d36a51b111e0f72d0012e207d467e1f1052116ef" name="recv_4" x="1428" y="1372">
+      <params/>
+      <attribs>
+         <objref attributeName="sender" obj="DPAD_Y_LEFT_RIGHT"/>
+      </attribs>
+   </obj>
+   <obj type="logic/samplehold" uuid="55479a62c4ed7e3536b6e6f339ce05a802a81b9d" name="samplehold_1" x="1582" y="1372">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_6" x="1694" y="1372">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="1386" text="Page 1: 1 0"/>
+   <comment type="patch/comment" x="14" y="1400" text="Page 2: 0 1"/>
+   <comment type="patch/comment" x="14" y="1414" text="Page 3: 1 1"/>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page4_Latch_Knob4" x="1008" y="1414">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB4" x="1176" y="1414">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="14" y="1428" text="Page 0: 0 0"/>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_7" x="168" y="1442">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB8"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_5" x="14" y="1456">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="9b90f085-6c5c-4bcf-87ee-e50ae33fce74" name="Page4_Latch_Knob5" x="1008" y="1470">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB5" x="1176" y="1470">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_8" x="168" y="1512">
+      <params/>
+      <attribs>
+         <combo attributeName="pad" selection="PB9"/>
+         <combo attributeName="mode" selection="Push pull"/>
+      </attribs>
+   </obj>
+   <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_6" x="14" y="1526">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/utils/ctl_latch" uuid="c09a11cf-a1a9-40c0-bcb8-935c03fa6a6b" name="Page4_Latch_Knob6" x="1008" y="1526">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="patch/send f" uuid="8a7799ea1c3b8582991e669a4f70e2f663841f2d" name="PAGE4_KNOB6" x="1176" y="1526">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="out_1" inlet="left"/>
+      </net>
+      <net>
+         <source obj="samplehold_1" outlet="out"/>
+         <dest obj="dial_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="flipflop_1" outlet="o"/>
+         <dest obj="samplehold_1" inlet="s_h"/>
+         <dest obj="samplehold_2" inlet="s_h"/>
+      </net>
+      <net>
+         <source obj="samplehold_2" outlet="out"/>
+         <dest obj="dial_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_1" outlet="o"/>
+         <dest obj="demux_1" inlet="s"/>
+         <dest obj="demux_2" inlet="s"/>
+         <dest obj="demux_3" inlet="s"/>
+         <dest obj="demux_4" inlet="s"/>
+         <dest obj="demux_5" inlet="s"/>
+         <dest obj="demux_6" inlet="s"/>
+         <dest obj="==_5" inlet="in"/>
+         <dest obj="==_6" inlet="in"/>
+         <dest obj="==_7" inlet="in"/>
+         <dest obj="==_8" inlet="in"/>
+      </net>
+      <net>
+         <source obj="or_5" outlet="o"/>
+         <dest obj="digital_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="or_6" outlet="o"/>
+         <dest obj="digital_7" inlet="in"/>
+      </net>
+      <net>
+         <source obj="analog_1" outlet="out"/>
+         <dest obj="DPAD_X_UP_DOWN" inlet="v"/>
+      </net>
+      <net>
+         <source obj="analog_2" outlet="out"/>
+         <dest obj="DPAD_Y_LEFT_RIGHT" inlet="v"/>
+      </net>
+      <net>
+         <source obj="digital_1" outlet="out"/>
+         <dest obj="DPAD_PRESS" inlet="v"/>
+      </net>
+      <net>
+         <source obj="analog_3" outlet="out"/>
+         <dest obj="demux_4" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_6" outlet="out"/>
+         <dest obj="demux_1" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_7" outlet="out"/>
+         <dest obj="demux_2" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_8" outlet="out"/>
+         <dest obj="demux_3" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_5" outlet="out"/>
+         <dest obj="demux_6" inlet="i"/>
+      </net>
+      <net>
+         <source obj="analog_4" outlet="out"/>
+         <dest obj="demux_5" inlet="i"/>
+      </net>
+      <net>
+         <source obj="digital_3" outlet="out"/>
+         <dest obj="counter2_1" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="digital_4" outlet="out"/>
+         <dest obj="digital_8" inlet="in"/>
+         <dest obj="BPMext_1" inlet="reset"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob1" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob1" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob1" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob2" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob2" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob2" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_2" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob2" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob3" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob3" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob3" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob4" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob4" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob4" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_4" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob4" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob5" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob5" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob5" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_5" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob6" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o3"/>
+         <dest obj="Page4_Latch_Knob5" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o2"/>
+         <dest obj="Page3_Latch_Knob6" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob6" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_6" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob6" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="==_5" outlet="out"/>
+         <dest obj="or_5" inlet="i1"/>
+         <dest obj="Page1_Latch_Knob1" inlet="IsOn"/>
+         <dest obj="Page1_Latch_Knob2" inlet="IsOn"/>
+         <dest obj="Page1_Latch_Knob3" inlet="IsOn"/>
+         <dest obj="Page1_Latch_Knob4" inlet="IsOn"/>
+         <dest obj="Page1_Latch_Knob5" inlet="IsOn"/>
+         <dest obj="Page1_Latch_Knob6" inlet="IsOn"/>
+      </net>
+      <net>
+         <source obj="==_6" outlet="out"/>
+         <dest obj="or_6" inlet="i1"/>
+         <dest obj="Page2_Latch_Knob1" inlet="IsOn"/>
+         <dest obj="Page2_Latch_Knob2" inlet="IsOn"/>
+         <dest obj="Page2_Latch_Knob3" inlet="IsOn"/>
+         <dest obj="Page2_Latch_Knob4" inlet="IsOn"/>
+         <dest obj="Page2_Latch_Knob5" inlet="IsOn"/>
+         <dest obj="Page2_Latch_Knob6" inlet="IsOn"/>
+      </net>
+      <net>
+         <source obj="==_7" outlet="out"/>
+         <dest obj="or_5" inlet="i2"/>
+         <dest obj="or_6" inlet="i2"/>
+         <dest obj="Page3_Latch_Knob1" inlet="IsOn"/>
+         <dest obj="Page3_Latch_Knob2" inlet="IsOn"/>
+         <dest obj="Page3_Latch_Knob3" inlet="IsOn"/>
+         <dest obj="Page3_Latch_Knob4" inlet="IsOn"/>
+         <dest obj="Page3_Latch_Knob5" inlet="IsOn"/>
+         <dest obj="Page3_Latch_Knob6" inlet="IsOn"/>
+      </net>
+      <net>
+         <source obj="==_8" outlet="out"/>
+         <dest obj="Page4_Latch_Knob6" inlet="IsOn"/>
+         <dest obj="Page4_Latch_Knob5" inlet="IsOn"/>
+         <dest obj="Page4_Latch_Knob4" inlet="IsOn"/>
+         <dest obj="Page4_Latch_Knob3" inlet="IsOn"/>
+         <dest obj="Page4_Latch_Knob2" inlet="IsOn"/>
+         <dest obj="Page4_Latch_Knob1" inlet="IsOn"/>
+      </net>
+      <net>
+         <source obj="digital_2" outlet="out"/>
+         <dest obj="counter2_1" inlet="dec"/>
+      </net>
+      <net>
+         <source obj="demux_1" outlet="o0"/>
+         <dest obj="Page1_Latch_Knob1" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="demux_3" outlet="o1"/>
+         <dest obj="Page2_Latch_Knob3" inlet="CtlInput"/>
+      </net>
+      <net>
+         <source obj="recv_1" outlet="v"/>
+         <dest obj="flipflop_1" inlet="trig"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_2" outlet="v"/>
+         <dest obj="digital_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_3" outlet="v"/>
+         <dest obj="samplehold_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_4" outlet="v"/>
+         <dest obj="samplehold_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Voice1_Midi_In" outlet="note"/>
+         <dest obj="remap16_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Voice1_Midi_In" outlet="gate"/>
+         <dest obj="blown_1" inlet="strike"/>
+         <dest obj="ad_1" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="blown_1" outlet="wave"/>
+         <dest obj="vca_2" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_5" outlet="v"/>
+         <dest obj="vca_3" inlet="v"/>
+         <dest obj="vca_4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_2" outlet="o"/>
+         <dest obj="reverb_1" inlet="l"/>
+         <dest obj="reverb_1" inlet="r"/>
+      </net>
+      <net>
+         <source obj="ad_1" outlet="env"/>
+         <dest obj="vca_2" inlet="v"/>
+         <dest obj="*_1" inlet="b"/>
+      </net>
+      <net>
+         <source obj="*_1" outlet="result"/>
+         <dest obj="scale_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="scale_1" outlet="out"/>
+         <dest obj="blown_1" inlet="color"/>
+      </net>
+      <net>
+         <source obj="reverb_1" outlet="l"/>
+         <dest obj="vca_3" inlet="a"/>
+      </net>
+      <net>
+         <source obj="reverb_1" outlet="r"/>
+         <dest obj="vca_4" inlet="a"/>
+      </net>
+      <net>
+         <source obj="mix_2" outlet="out"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_6" outlet="v"/>
+         <dest obj="vca_1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="mix_3" outlet="out"/>
+         <dest obj="vca_6" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_7" outlet="v"/>
+         <dest obj="vca_6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_6" outlet="o"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="vca_4" outlet="o"/>
+         <dest obj="mix_3" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="vca_3" outlet="o"/>
+         <dest obj="mix_2" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="recv_8" outlet="v"/>
+         <dest obj="reverb_1" inlet="amount"/>
+      </net>
+      <net>
+         <source obj="recv_9" outlet="v"/>
+         <dest obj="reverb_1" inlet="time"/>
+      </net>
+      <net>
+         <source obj="recv_10" outlet="v"/>
+         <dest obj="reverb_1" inlet="diffusion"/>
+      </net>
+      <net>
+         <source obj="recv_11" outlet="v"/>
+         <dest obj="*_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="recv_12" outlet="v"/>
+         <dest obj="blown_1" inlet="timbre"/>
+      </net>
+      <net>
+         <source obj="recv_13" outlet="v"/>
+         <dest obj="reverb_1" inlet="gain"/>
+      </net>
+      <net>
+         <source obj="Voice2_Midi_In" outlet="note"/>
+         <dest obj="remap16_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="recv_14" outlet="v"/>
+         <dest obj="vca_5" inlet="v"/>
+         <dest obj="vca_7" inlet="v"/>
+      </net>
+      <net>
+         <source obj="struckbell_1" outlet="wave"/>
+         <dest obj="vca_8" inlet="a"/>
+      </net>
+      <net>
+         <source obj="vca_5" outlet="o"/>
+         <dest obj="mix_2" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="vca_7" outlet="o"/>
+         <dest obj="mix_3" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="Voice2_Midi_In" outlet="gate"/>
+         <dest obj="struckbell_1" inlet="strike"/>
+         <dest obj="ad_2" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="recv_15" outlet="v"/>
+         <dest obj="struckbell_1" inlet="timbre"/>
+      </net>
+      <net>
+         <source obj="recv_16" outlet="v"/>
+         <dest obj="struckbell_1" inlet="color"/>
+      </net>
+      <net>
+         <source obj="ad_2" outlet="env"/>
+         <dest obj="vca_8" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_8" outlet="o"/>
+         <dest obj="obj_1" inlet="in_l"/>
+         <dest obj="obj_1" inlet="in_r"/>
+      </net>
+      <net>
+         <source obj="obj_1" outlet="out_l"/>
+         <dest obj="vca_5" inlet="a"/>
+      </net>
+      <net>
+         <source obj="obj_1" outlet="out_r"/>
+         <dest obj="vca_7" inlet="a"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari3"/>
+         <dest obj="obj_1" inlet="24ppq"/>
+      </net>
+      <net>
+         <source obj="i_1" outlet="out"/>
+         <dest obj="obj_1" inlet="clk_div"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob1" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob2" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob3" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob4" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob5" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page1_Latch_Knob6" outlet="CtlValue"/>
+         <dest obj="PAGE1_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob1" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob2" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob4" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob3" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob5" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page2_Latch_Knob6" outlet="CtlValue"/>
+         <dest obj="PAGE2_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob1" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob2" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob3" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob4" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob5" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page3_Latch_Knob6" outlet="CtlValue"/>
+         <dest obj="PAGE3_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob1" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob2" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob3" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob4" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB4" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob5" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB5" inlet="v"/>
+      </net>
+      <net>
+         <source obj="Page4_Latch_Knob6" outlet="CtlValue"/>
+         <dest obj="PAGE4_KNOB6" inlet="v"/>
+      </net>
+      <net>
+         <source obj="remap16_1" outlet="out"/>
+         <dest obj="blown_1" inlet="pitch"/>
+         <dest obj="reverb_1" inlet="lowpass"/>
+      </net>
+      <net>
+         <source obj="remap16_2" outlet="out"/>
+         <dest obj="struckbell_1" inlet="pitch"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>0</x>
+      <y>23</y>
+      <width>1920</width>
+      <height>1013</height>
+   </windowPos>
+</patch-1.0>

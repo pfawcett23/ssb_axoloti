@@ -1,0 +1,247 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="ctrl/dial b" uuid="862e7d7f29093cb1ce4aed72244d118ad4d46692" name="Tempo" x="0" y="56">
+      <params>
+         <frac32.s.map name="value" value="16.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="lfo/square" uuid="de6909eb64db13af5b43f979a4c130024b3a4793" name="square_1" x="70" y="56">
+      <params>
+         <frac32.s.map name="pitch" value="-16.3700008392334"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="238" y="56">
+      <params>
+         <int32 name="maximum" value="16"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel b 16 8t pulse" uuid="831eeb126a17f646cd63749a9829dd27f7212acd" name="sel_1" x="322" y="56">
+      <params>
+         <bin16 name="p1" value="4369"/>
+         <bin16 name="p2" value="33924"/>
+         <bin16 name="p3" value="5285"/>
+         <bin16 name="p4" value="16392"/>
+         <bin16 name="p5" value="55872"/>
+         <bin16 name="p6" value="0"/>
+         <bin16 name="p7" value="0"/>
+         <bin16 name="p8" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="./DrumExp/DrumSub" uuid="0c5cc34e-310c-4191-b9dc-3d247c48d468" name="DrumSub_1" x="546" y="56">
+      <params>
+         <frac32.s.map name="obj_1:env" value="-36.0"/>
+         <frac32.s.map name="obj_1:bpf:pitch" value="49.0"/>
+         <frac32.s.map name="obj_3:env" value="-20.0"/>
+         <frac32.s.map name="obj_3:bpf:pitch" value="49.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="filter/hp1" uuid="abea7276611b289bed35b80345a6bc4efd4d9a4e" name="hp1_1" x="686" y="56">
+      <params>
+         <frac32.s.map name="freq" value="-48.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="filter/lp svf" uuid="2003da6360b4fdb967cd635e9f6544e832fd522e" name="lp_1" x="798" y="56">
+      <params>
+         <frac32.s.map name="pitch" value="42.0"/>
+         <frac32.u.map name="reso" value="11.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" uuid="221f038da51943034a75e442c90624fcebfe6112" name="mix_2" x="938" y="210">
+      <params>
+         <frac32.u.map name="gain1" value="35.5"/>
+         <frac32.u.map name="gain2" value="47.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1050" y="210">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./Voice1/SawBass" uuid="8ab96694-5378-48ef-be8e-4e7a4382a739" name="SawBass_1" x="560" y="336">
+      <params>
+         <frac32.s.map name="adsr_2:a" value="-44.0"/>
+         <frac32.s.map name="adsr_2:d" value="-13.0"/>
+         <frac32.u.map name="adsr_2:s" value="33.0"/>
+         <frac32.s.map name="adsr_2:r" value="34.0"/>
+         <frac32.s.map name="adsr_1:a" value="8.0"/>
+         <frac32.s.map name="adsr_1:d" value="3.0"/>
+         <frac32.u.map name="adsr_1:s" value="60.0"/>
+         <frac32.s.map name="adsr_1:r" value="40.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel i 16" uuid="630930cb677ad1f222ad83b8f84d26a7aa92cafc" name="sel_3" x="322" y="350">
+      <params>
+         <int32.small name="i0" value="1"/>
+         <int32.small name="i1" value="0"/>
+         <int32.small name="i2" value="0"/>
+         <int32.small name="i3" value="0"/>
+         <int32.small name="i4" value="7"/>
+         <int32.small name="i5" value="0"/>
+         <int32.small name="i6" value="1"/>
+         <int32.small name="i7" value="0"/>
+         <int32.small name="i8" value="0"/>
+         <int32.small name="i9" value="0"/>
+         <int32.small name="i10" value="0"/>
+         <int32.small name="i11" value="0"/>
+         <int32.small name="i12" value="0"/>
+         <int32.small name="i13" value="0"/>
+         <int32.small name="i14" value="0"/>
+         <int32.small name="i15" value="5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="Drive" x="182" y="406">
+      <params>
+         <frac32.u.map name="value" value="52.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel b 16" uuid="ee021bac36292c167fe475835603aac88a83b3fd" name="sel_4" x="322" y="420">
+      <params>
+         <bin16 name="b16" value="42065"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial b" uuid="862e7d7f29093cb1ce4aed72244d118ad4d46692" name="Freq" x="182" y="490">
+      <params>
+         <frac32.s.map name="value" value="39.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="Res" x="252" y="490">
+      <params>
+         <frac32.u.map name="value" value="21.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel fp 16" uuid="3d0698411643c13e342d17c8750d68d01689c658" name="sel_2" x="322" y="490">
+      <params>
+         <frac32.u.mapvsl name="b0" value="64.0"/>
+         <frac32.u.mapvsl name="b1" value="50.0"/>
+         <frac32.u.mapvsl name="b2" value="51.0"/>
+         <frac32.u.mapvsl name="b3" value="52.5"/>
+         <frac32.u.mapvsl name="b4" value="51.0"/>
+         <frac32.u.mapvsl name="b5" value="52.0"/>
+         <frac32.u.mapvsl name="b6" value="64.0"/>
+         <frac32.u.mapvsl name="b7" value="61.0"/>
+         <frac32.u.mapvsl name="b8" value="46.5"/>
+         <frac32.u.mapvsl name="b9" value="50.0"/>
+         <frac32.u.mapvsl name="b10" value="55.0"/>
+         <frac32.u.mapvsl name="b11" value="50.0"/>
+         <frac32.u.mapvsl name="b12" value="55.5"/>
+         <frac32.u.mapvsl name="b13" value="50.5"/>
+         <frac32.u.mapvsl name="b14" value="54.5"/>
+         <frac32.u.mapvsl name="b15" value="55.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial b" uuid="862e7d7f29093cb1ce4aed72244d118ad4d46692" name="Filt Env" x="182" y="574">
+      <params>
+         <frac32.s.map name="value" value="15.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="square_1" outlet="wave"/>
+         <dest obj="counter2_1" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="counter2_1" outlet="o"/>
+         <dest obj="sel_1" inlet="in"/>
+         <dest obj="sel_2" inlet="in"/>
+         <dest obj="sel_3" inlet="in"/>
+         <dest obj="sel_4" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Tempo" outlet="out"/>
+         <dest obj="square_1" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="sel_1" outlet="o1"/>
+         <dest obj="DrumSub_1" inlet="inlet_1"/>
+      </net>
+      <net>
+         <source obj="sel_1" outlet="o2"/>
+         <dest obj="DrumSub_1" inlet="inlet_2"/>
+      </net>
+      <net>
+         <source obj="sel_1" outlet="o3"/>
+         <dest obj="DrumSub_1" inlet="inlet_3"/>
+      </net>
+      <net>
+         <source obj="sel_1" outlet="o4"/>
+         <dest obj="DrumSub_1" inlet="inlet_4"/>
+      </net>
+      <net>
+         <source obj="sel_1" outlet="o5"/>
+         <dest obj="DrumSub_1" inlet="inlet_5"/>
+      </net>
+      <net>
+         <source obj="hp1_1" outlet="out"/>
+         <dest obj="lp_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="DrumSub_1" outlet="outlet_1"/>
+         <dest obj="hp1_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="mix_2" outlet="out"/>
+         <dest obj="out_1" inlet="right"/>
+         <dest obj="out_1" inlet="left"/>
+      </net>
+      <net>
+         <source obj="lp_1" outlet="out"/>
+         <dest obj="mix_2" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="SawBass_1" outlet="Audio Out"/>
+         <dest obj="mix_2" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="sel_2" outlet="o"/>
+         <dest obj="SawBass_1" inlet="Velocity"/>
+      </net>
+      <net>
+         <source obj="sel_3" outlet="o"/>
+         <dest obj="SawBass_1" inlet="Pitch"/>
+      </net>
+      <net>
+         <source obj="sel_4" outlet="o"/>
+         <dest obj="SawBass_1" inlet="Gate"/>
+      </net>
+      <net>
+         <source obj="Drive" outlet="out"/>
+         <dest obj="SawBass_1" inlet="Filter Drive"/>
+      </net>
+      <net>
+         <source obj="Res" outlet="out"/>
+         <dest obj="SawBass_1" inlet="Filter Res"/>
+      </net>
+      <net>
+         <source obj="Freq" outlet="out"/>
+         <dest obj="SawBass_1" inlet="Filter Freq"/>
+      </net>
+      <net>
+         <source obj="Filt Env" outlet="out"/>
+         <dest obj="SawBass_1" inlet="Filter Env Amt"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>109</x>
+      <y>23</y>
+      <width>1330</width>
+      <height>945</height>
+   </windowPos>
+</patch-1.0>

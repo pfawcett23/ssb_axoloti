@@ -1,0 +1,70 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="ctrl/button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" name="button_1" x="98" y="112">
+      <params>
+         <bool32.mom name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/ctrl/axoCtl8PageUpDown" uuid="487c40b7-49b9-484c-8805-ac9f1d17a623" name="axoCtl8PageUpDown_1" x="196" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_1" x="476" y="112">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" name="button_2" x="98" y="182">
+      <params>
+         <bool32.mom name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="476" y="196">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_2" x="476" y="252">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_3" x="476" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="button_1" outlet="o"/>
+         <dest obj="axoCtl8PageUpDown_1" inlet="Button Up"/>
+      </net>
+      <net>
+         <source obj="button_2" outlet="o"/>
+         <dest obj="axoCtl8PageUpDown_1" inlet="Button Down"/>
+      </net>
+      <net>
+         <source obj="axoCtl8PageUpDown_1" outlet="Index Out"/>
+         <dest obj="dial_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="axoCtl8PageUpDown_1" outlet="LED A State"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="axoCtl8PageUpDown_1" outlet="LED B State"/>
+         <dest obj="bool_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="axoCtl8PageUpDown_1" outlet="LED C State"/>
+         <dest obj="bool_3" inlet="in"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>361</x>
+      <y>135</y>
+      <width>918</width>
+      <height>691</height>
+   </windowPos>
+</patch-1.0>

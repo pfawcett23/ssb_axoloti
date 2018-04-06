@@ -1,0 +1,233 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_3" x="924" y="112">
+      <params>
+         <frac32.u.map name="value" value="18.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_4" x="994" y="112">
+      <params>
+         <frac32.u.map name="value" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sss/lfo/BPM" uuid="0c413701-f1f1-4e91-8ae5-7d8362f94bef" name="BPM_1" x="56" y="266">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari" value="1"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_1" x="182" y="266">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_1" x="308" y="280">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel i 32" uuid="da57265c05946784a6b60f7879b838d6bb4b099" name="Note Value" x="308" y="336">
+      <params>
+         <int32.small name="i0" value="3"/>
+         <int32.small name="i1" value="3"/>
+         <int32.small name="i2" value="3"/>
+         <int32.small name="i3" value="3"/>
+         <int32.small name="i4" value="3"/>
+         <int32.small name="i5" value="3"/>
+         <int32.small name="i6" value="5"/>
+         <int32.small name="i7" value="5"/>
+         <int32.small name="i8" value="5"/>
+         <int32.small name="i9" value="5"/>
+         <int32.small name="i10" value="1"/>
+         <int32.small name="i11" value="1"/>
+         <int32.small name="i12" value="1"/>
+         <int32.small name="i13" value="1"/>
+         <int32.small name="i14" value="8"/>
+         <int32.small name="i15" value="8"/>
+         <int32.small name="i16" value="8"/>
+         <int32.small name="i17" value="8"/>
+         <int32.small name="i18" value="8"/>
+         <int32.small name="i19" value="8"/>
+         <int32.small name="i20" value="8"/>
+         <int32.small name="i21" value="8"/>
+         <int32.small name="i22" value="1"/>
+         <int32.small name="i23" value="1"/>
+         <int32.small name="i24" value="1"/>
+         <int32.small name="i25" value="1"/>
+         <int32.small name="i26" value="1"/>
+         <int32.small name="i27" value="1"/>
+         <int32.small name="i28" value="10"/>
+         <int32.small name="i29" value="10"/>
+         <int32.small name="i30" value="10"/>
+         <int32.small name="i31" value="10"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="math/-c" uuid="bc70bed87e5405985ade03f4806b9450609a9093" name="-c_1" x="714" y="336">
+      <params>
+         <frac32.u.map name="c" value="24.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="osc/brds/trianglefold" uuid="8e4b08de-947e-4c8b-940d-48e51aa96e94" name="trianglefold_1" x="868" y="336">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="timbre" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sss/dist/saturator" uuid="41495e37-8b0a-41cf-8119-ddc58734e89f" name="saturator_1" x="994" y="336">
+      <params>
+         <frac32.u.map name="amp" value="27.5"/>
+         <frac32.u.map name="strength" value="30.0"/>
+         <frac32.u.map name="max" value="49.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="filter/vcf" uuid="2b0aad6aeb06cc86c5802d2f167e9f281d8c35e1" name="vcf_1" x="1120" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="1232" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="1302" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1372" y="336">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_2" x="182" y="406">
+      <params>
+         <int32 name="maximum" value="15"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel fp 16" uuid="3d0698411643c13e342d17c8750d68d01689c658" name="Note Velocity" x="308" y="406">
+      <params>
+         <frac32.u.mapvsl name="b0" value="22.0"/>
+         <frac32.u.mapvsl name="b1" value="24.0"/>
+         <frac32.u.mapvsl name="b2" value="25.0"/>
+         <frac32.u.mapvsl name="b3" value="19.0"/>
+         <frac32.u.mapvsl name="b4" value="32.0"/>
+         <frac32.u.mapvsl name="b5" value="24.5"/>
+         <frac32.u.mapvsl name="b6" value="26.5"/>
+         <frac32.u.mapvsl name="b7" value="20.0"/>
+         <frac32.u.mapvsl name="b8" value="25.0"/>
+         <frac32.u.mapvsl name="b9" value="23.0"/>
+         <frac32.u.mapvsl name="b10" value="18.0"/>
+         <frac32.u.mapvsl name="b11" value="14.5"/>
+         <frac32.u.mapvsl name="b12" value="25.5"/>
+         <frac32.u.mapvsl name="b13" value="22.5"/>
+         <frac32.u.mapvsl name="b14" value="28.5"/>
+         <frac32.u.mapvsl name="b15" value="27.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="1330" y="532">
+      <params>
+         <frac32.u.map name="value" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="env/hd lin m" uuid="d587c40eeaf1152b109e2316cbaa9f7ada7b2edf" name="hd_1" x="882" y="560">
+      <params>
+         <frac32.s.map name="d" value="49.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sel/sel b 32" uuid="3456f885131208fcf1d29ec444588d8e0dc2d066" name="Note Gate" x="308" y="588">
+      <params>
+         <bin32 name="b32" value="286331153"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="BPM_1" outlet="fours"/>
+         <dest obj="counter_1" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="counter_1" outlet="o"/>
+         <dest obj="Note Gate" inlet="in"/>
+         <dest obj="Note Value" inlet="in"/>
+         <dest obj="ibar_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter_2" outlet="o"/>
+         <dest obj="Note Velocity" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Note Value" outlet="o"/>
+         <dest obj="-c_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="trianglefold_1" outlet="wave"/>
+         <dest obj="saturator_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="Note Velocity" outlet="o"/>
+         <dest obj="trianglefold_1" inlet="timbre"/>
+      </net>
+      <net>
+         <source obj="Note Gate" outlet="o"/>
+         <dest obj="hd_1" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="saturator_1" outlet="out"/>
+         <dest obj="vcf_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="vcf_1" outlet="out"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="-c_1" outlet="out"/>
+         <dest obj="trianglefold_1" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="vca_2" outlet="o"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="dial_1" outlet="out"/>
+         <dest obj="vca_2" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="vca_2" inlet="a"/>
+      </net>
+      <net>
+         <source obj="dial_3" outlet="out"/>
+         <dest obj="vcf_1" inlet="frequency"/>
+      </net>
+      <net>
+         <source obj="dial_4" outlet="out"/>
+         <dest obj="vcf_1" inlet="reso"/>
+      </net>
+      <net>
+         <source obj="BPM_1" outlet="beat"/>
+         <dest obj="counter_2" inlet="trig"/>
+      </net>
+      <net>
+         <source obj="hd_1" outlet="env"/>
+         <dest obj="vca_1" inlet="v"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>58</x>
+      <y>23</y>
+      <width>1622</width>
+      <height>968</height>
+   </windowPos>
+</patch-1.0>

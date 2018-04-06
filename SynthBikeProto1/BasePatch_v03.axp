@@ -1,0 +1,3877 @@
+<patch-1.0 appVersion="1.0.12">
+   <patcher type="patch/patcher" uuid="8bcc6161-d1e0-4fdf-b751-4e7f2d82ba02" name="AxoCtrlOut" x="14" y="14">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Y_UD" x="784" y="14">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="4e401252-e81d-4b2e-96cf-85943c55e5a8" name="UI Controls" x="14" y="42">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <comment type="patch/comment" x="42" y="42" text="DPad (X/Y/Push)"/>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_1" x="42" y="70">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA0 (ADC1_IN0)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Stick Y (Up/Down)" x="182" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_2" x="280" y="70">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA1 (ADC1_IN1)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Stick X (Left/Right)" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_1" x="532" y="70">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PC0"/>
+                     <combo attributeName="mode" selection="pulldown"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Stick Push" x="672" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <comment type="patch/comment" x="42" y="154" text="Tob Knob Bank"/>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_3" x="42" y="182">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA5 (ADC1_IN5)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Top Knob A" x="182" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_4" x="280" y="182">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA6 (ADC1_IN6)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Top Knob B" x="420" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_5" x="532" y="182">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA7 (ADC1_IN7)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Top Knob C" x="672" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <comment type="patch/comment" x="42" y="252" text="Bottom Knob Bank"/>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_6" x="42" y="280">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA2 (ADC1_IN2)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Bottom Knob A" x="182" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_7" x="280" y="280">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA3 (ADC1_IN3)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Bottom Knob B" x="420" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/analog" uuid="1c0c845ed2d7e06ae5f377ba13d9d09f4747ac87" name="analog_8" x="532" y="280">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="channel" selection="PA4 (ADC1_IN4)"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Bottom Knob C" x="672" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <comment type="patch/comment" x="42" y="350" text="Three Button Bank."/>
+               <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_2" x="42" y="378">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PC1"/>
+                     <combo attributeName="mode" selection="pulldown"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Button A" x="182" y="378">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_3" x="280" y="378">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PC2"/>
+                     <combo attributeName="mode" selection="pulldown"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Button B" x="420" y="378">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/in/digital" uuid="f59f139e8da912742832dc541157f20f30b7ac1b" name="digital_4" x="532" y="378">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PC3"/>
+                     <combo attributeName="mode" selection="pulldown"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Button C" x="672" y="378">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="digital_2" outlet="out"/>
+                     <dest obj="Button A" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="digital_3" outlet="out"/>
+                     <dest obj="Button B" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="digital_4" outlet="out"/>
+                     <dest obj="Button C" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_1" outlet="out"/>
+                     <dest obj="Stick Y (Up/Down)" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_2" outlet="out"/>
+                     <dest obj="Stick X (Left/Right)" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="digital_1" outlet="out"/>
+                     <dest obj="Stick Push" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_3" outlet="out"/>
+                     <dest obj="Top Knob A" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_6" outlet="out"/>
+                     <dest obj="Bottom Knob A" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_7" outlet="out"/>
+                     <dest obj="Bottom Knob B" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_8" outlet="out"/>
+                     <dest obj="Bottom Knob C" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_4" outlet="out"/>
+                     <dest obj="Top Knob B" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="analog_5" outlet="out"/>
+                     <dest obj="Top Knob C" inlet="outlet"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>461</x>
+                  <y>31</y>
+                  <width>1252</width>
+                  <height>998</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="X_LR" x="784" y="56">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="P_CLICK" x="784" y="98">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="ButtonC" x="784" y="140">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob1" x="784" y="182">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob2" x="784" y="224">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob3" x="784" y="266">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="932ebb29-f2c7-485f-82a2-18a9d6f465b1" name="axoCtlKnobRoute_1" x="546" y="308">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob1" x="56" y="28">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_1" x="308" y="28">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="ca08d3d0-edae-4950-8255-c55ea6253b5e" name="patcher_1" x="462" y="28">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob1" x="812" y="28">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob2" x="812" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob3" x="812" y="112">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob4" x="812" y="154">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob2" x="56" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_2" x="308" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="96e080cc-1a7a-4b35-a943-b2d09d28bdb4" name="patcher_2" x="462" y="182">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob5" x="812" y="196">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob6" x="812" y="238">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob1" x="812" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob2" x="812" y="322">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob3" x="56" y="336">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_3" x="308" y="336">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="7192256e-9309-4040-a0b2-2515b0502469" name="patcher_3" x="462" y="336">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob3" x="812" y="364">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob4" x="812" y="406">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob5" x="812" y="448">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob4" x="56" y="490">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_4" x="308" y="490">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="ec87d3ed-c8e2-4d83-adb1-b82d7e776968" name="patcher_4" x="462" y="490">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob6" x="812" y="490">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob1" x="812" y="532">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob2" x="812" y="574">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob3" x="812" y="616">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob5" x="56" y="644">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_5" x="308" y="644">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="3e78db74-034f-4a42-9112-cd55566d0e59" name="patcher_5" x="462" y="644">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob4" x="812" y="658">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob5" x="812" y="700">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob6" x="812" y="742">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob1" x="812" y="784">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob6" x="56" y="798">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="demux/demux 4" uuid="f0ad8ce734dd32bada4ed247c85ca3b8e5922af3" name="demux_6" x="308" y="798">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <patcher type="patch/patcher" uuid="26b3cfa4-90c5-41fd-99ff-c398194fcde7" name="patcher_6" x="462" y="798">
+                  <params/>
+                  <attribs/>
+                  <subpatch appVersion="1.0.12">
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_2" x="84" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="322" y="70">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="0"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="448" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_1" x="602" y="70">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_3" x="84" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="322" y="126">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="1"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_2" x="448" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_2" x="602" y="126">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_4" x="84" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="322" y="182">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="2"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_3" x="448" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_3" x="602" y="182">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="inlet_5" x="84" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="322" y="238">
+                        <params/>
+                        <attribs>
+                           <spinner attributeName="value" value="3"/>
+                        </attribs>
+                     </obj>
+                     <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_4" x="448" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="outlet_4" x="602" y="238">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="inlet_1" x="84" y="294">
+                        <params/>
+                        <attribs/>
+                     </obj>
+                     <nets>
+                        <net>
+                           <source obj="inlet_1" outlet="inlet"/>
+                           <dest obj="==_1" inlet="in"/>
+                           <dest obj="==_2" inlet="in"/>
+                           <dest obj="==_3" inlet="in"/>
+                           <dest obj="==_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="==_1" outlet="out"/>
+                           <dest obj="gate_hold_1" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_2" outlet="out"/>
+                           <dest obj="gate_hold_2" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_3" outlet="out"/>
+                           <dest obj="gate_hold_3" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="==_4" outlet="out"/>
+                           <dest obj="gate_hold_4" inlet="gate"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_2" outlet="inlet"/>
+                           <dest obj="gate_hold_1" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_3" outlet="inlet"/>
+                           <dest obj="gate_hold_2" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_4" outlet="inlet"/>
+                           <dest obj="gate_hold_3" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="inlet_5" outlet="inlet"/>
+                           <dest obj="gate_hold_4" inlet="in"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_1" outlet="out"/>
+                           <dest obj="outlet_1" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_4" outlet="out"/>
+                           <dest obj="outlet_4" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_3" outlet="out"/>
+                           <dest obj="outlet_3" inlet="outlet"/>
+                        </net>
+                        <net>
+                           <source obj="gate_hold_2" outlet="out"/>
+                           <dest obj="outlet_2" inlet="outlet"/>
+                        </net>
+                     </nets>
+                     <settings>
+                        <subpatchmode>no</subpatchmode>
+                     </settings>
+                     <notes><![CDATA[]]></notes>
+                     <windowPos>
+                        <x>0</x>
+                        <y>23</y>
+                        <width>1161</width>
+                        <height>730</height>
+                     </windowPos>
+                  </subpatch>
+               </patcher>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob2" x="812" y="826">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob3" x="812" y="868">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="PageIndex" x="56" y="882">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob4" x="812" y="910">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob5" x="812" y="952">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob6" x="812" y="994">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="Knob1" outlet="inlet"/>
+                     <dest obj="demux_1" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="demux_1" outlet="o0"/>
+                     <dest obj="patcher_1" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="Knob6" outlet="inlet"/>
+                     <dest obj="demux_6" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="Knob5" outlet="inlet"/>
+                     <dest obj="demux_5" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="Knob3" outlet="inlet"/>
+                     <dest obj="demux_3" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="Knob2" outlet="inlet"/>
+                     <dest obj="demux_2" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="demux_1" outlet="o1"/>
+                     <dest obj="patcher_1" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="demux_1" outlet="o2"/>
+                     <dest obj="patcher_1" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_1" outlet="o3"/>
+                     <dest obj="patcher_1" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_6" outlet="o3"/>
+                     <dest obj="patcher_6" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_6" outlet="o2"/>
+                     <dest obj="patcher_6" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_6" outlet="o1"/>
+                     <dest obj="patcher_6" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="demux_6" outlet="o0"/>
+                     <dest obj="patcher_6" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="demux_5" outlet="o3"/>
+                     <dest obj="patcher_5" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_5" outlet="o2"/>
+                     <dest obj="patcher_5" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_5" outlet="o1"/>
+                     <dest obj="patcher_5" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="demux_5" outlet="o0"/>
+                     <dest obj="patcher_5" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="demux_4" outlet="o3"/>
+                     <dest obj="patcher_4" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_4" outlet="o2"/>
+                     <dest obj="patcher_4" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_4" outlet="o1"/>
+                     <dest obj="patcher_4" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="demux_4" outlet="o0"/>
+                     <dest obj="patcher_4" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="demux_3" outlet="o3"/>
+                     <dest obj="patcher_3" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_2" outlet="o3"/>
+                     <dest obj="patcher_2" inlet="inlet_5"/>
+                  </net>
+                  <net>
+                     <source obj="demux_3" outlet="o1"/>
+                     <dest obj="patcher_3" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="demux_3" outlet="o2"/>
+                     <dest obj="patcher_3" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_3" outlet="o0"/>
+                     <dest obj="patcher_3" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="demux_2" outlet="o2"/>
+                     <dest obj="patcher_2" inlet="inlet_4"/>
+                  </net>
+                  <net>
+                     <source obj="demux_2" outlet="o1"/>
+                     <dest obj="patcher_2" inlet="inlet_3"/>
+                  </net>
+                  <net>
+                     <source obj="PageIndex" outlet="inlet"/>
+                     <dest obj="demux_6" inlet="s"/>
+                     <dest obj="demux_5" inlet="s"/>
+                     <dest obj="demux_4" inlet="s"/>
+                     <dest obj="demux_3" inlet="s"/>
+                     <dest obj="demux_2" inlet="s"/>
+                     <dest obj="demux_1" inlet="s"/>
+                     <dest obj="patcher_1" inlet="inlet_1"/>
+                     <dest obj="patcher_3" inlet="inlet_1"/>
+                     <dest obj="patcher_6" inlet="inlet_1"/>
+                     <dest obj="patcher_5" inlet="inlet_1"/>
+                     <dest obj="patcher_4" inlet="inlet_1"/>
+                     <dest obj="patcher_2" inlet="inlet_1"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_1" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob1" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_1" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob1" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_1" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob1" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_1" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob1" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="demux_2" outlet="o0"/>
+                     <dest obj="patcher_2" inlet="inlet_2"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_2" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob2" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_2" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob2" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_2" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob2" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_2" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob2" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_3" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob3" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_3" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob3" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_3" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob3" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_3" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob3" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="Knob4" outlet="inlet"/>
+                     <dest obj="demux_4" inlet="i"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_4" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob4" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_4" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob4" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_4" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob4" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_4" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob4" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_6" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob6" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_6" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob6" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_6" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob6" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_6" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob6" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_5" outlet="outlet_4"/>
+                     <dest obj="Page4:Knob5" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_5" outlet="outlet_3"/>
+                     <dest obj="Page3:Knob5" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_5" outlet="outlet_2"/>
+                     <dest obj="Page2:Knob5" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="patcher_5" outlet="outlet_1"/>
+                     <dest obj="Page1:Knob5" inlet="outlet"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>380</x>
+                  <y>23</y>
+                  <width>1358</width>
+                  <height>1008</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob4" x="784" y="308">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob5" x="784" y="350">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page1:Knob6" x="784" y="392">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="8ea041be-c6ba-45f6-8037-7cd83190526b" name="axoCtl4PageUpDown_1" x="182" y="420">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Button Up" x="14" y="84">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="126" y="84">
+                  <params>
+                     <int32 name="maximum" value="4"/>
+                  </params>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet i" uuid="aae2176b26209e34e4fdeba5edb1ace82d178655" name="Index Out" x="490" y="84">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_1" x="280" y="126">
+                  <params/>
+                  <attribs>
+                     <spinner attributeName="value" value="0"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Button Down" x="14" y="140">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_2" x="406" y="140">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="LED A State" x="490" y="140">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_3" x="280" y="182">
+                  <params/>
+                  <attribs>
+                     <spinner attributeName="value" value="2"/>
+                  </attribs>
+               </obj>
+               <comment type="patch/comment" x="490" y="196" text="Led Page Indicator States:"/>
+               <comment type="patch/comment" x="490" y="210" text="Page 1: 1 0"/>
+               <comment type="patch/comment" x="490" y="224" text="Page 2: 0 1"/>
+               <comment type="patch/comment" x="490" y="238" text="Page 3: 1 1"/>
+               <comment type="patch/comment" x="490" y="252" text="Page 0: 0 0"/>
+               <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_2" x="280" y="266">
+                  <params/>
+                  <attribs>
+                     <spinner attributeName="value" value="1"/>
+                  </attribs>
+               </obj>
+               <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_1" x="406" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="LED B State" x="490" y="280">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="==_4" x="280" y="322">
+                  <params/>
+                  <attribs>
+                     <spinner attributeName="value" value="2"/>
+                  </attribs>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="Button Up" outlet="inlet"/>
+                     <dest obj="counter2_1" inlet="inc"/>
+                  </net>
+                  <net>
+                     <source obj="Button Down" outlet="inlet"/>
+                     <dest obj="counter2_1" inlet="dec"/>
+                  </net>
+                  <net>
+                     <source obj="counter2_1" outlet="o"/>
+                     <dest obj="Index Out" inlet="outlet"/>
+                     <dest obj="==_1" inlet="in"/>
+                     <dest obj="==_2" inlet="in"/>
+                     <dest obj="==_3" inlet="in"/>
+                     <dest obj="==_4" inlet="in"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="or_2" inlet="i1"/>
+                  </net>
+                  <net>
+                     <source obj="==_4" outlet="out"/>
+                     <dest obj="or_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="==_2" outlet="out"/>
+                     <dest obj="or_1" inlet="i1"/>
+                  </net>
+                  <net>
+                     <source obj="or_1" outlet="o"/>
+                     <dest obj="LED B State" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_3" outlet="out"/>
+                     <dest obj="or_2" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="or_2" outlet="o"/>
+                     <dest obj="LED A State" inlet="outlet"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>587</x>
+                  <y>23</y>
+                  <width>1206</width>
+                  <height>975</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob1" x="784" y="434">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="7d138354-6501-4a3b-afd7-871df1de2070" name="patcher_1" x="392" y="462">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <comment type="patch/comment" x="42" y="28" text="DPad LEDs"/>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="DPad Led On/Off" x="42" y="56">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_5" x="168" y="56">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PB0"/>
+                     <combo attributeName="mode" selection="Push pull"/>
+                  </attribs>
+               </obj>
+               <comment type="patch/comment" x="42" y="140" text="Three Button Bank LEDs"/>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Led A  On/Off" x="42" y="168">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_6" x="168" y="168">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PB1"/>
+                     <combo attributeName="mode" selection="Push pull"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Led B On/Off" x="42" y="266">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_7" x="168" y="266">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PB8"/>
+                     <combo attributeName="mode" selection="Push pull"/>
+                  </attribs>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Led C On/Off" x="42" y="364">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="gpio/out/digital" uuid="320eed040f6c55bb24c56416596ac2e67d0c82bc" name="digital_8" x="168" y="364">
+                  <params/>
+                  <attribs>
+                     <combo attributeName="pad" selection="PB9"/>
+                     <combo attributeName="mode" selection="Push pull"/>
+                  </attribs>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="Led B On/Off" outlet="inlet"/>
+                     <dest obj="digital_7" inlet="in"/>
+                  </net>
+                  <net>
+                     <source obj="Led A  On/Off" outlet="inlet"/>
+                     <dest obj="digital_6" inlet="in"/>
+                  </net>
+                  <net>
+                     <source obj="DPad Led On/Off" outlet="inlet"/>
+                     <dest obj="digital_5" inlet="in"/>
+                  </net>
+                  <net>
+                     <source obj="Led C On/Off" outlet="inlet"/>
+                     <dest obj="digital_8" inlet="in"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>0</x>
+                  <y>23</y>
+                  <width>1193</width>
+                  <height>1008</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob2" x="784" y="476">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob3" x="784" y="518">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob4" x="784" y="560">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob5" x="784" y="602">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page2:Knob6" x="784" y="644">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob1" x="784" y="686">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob2" x="784" y="728">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob3" x="784" y="770">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob4" x="784" y="812">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob5" x="784" y="854">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page3:Knob6" x="784" y="896">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob1" x="784" y="938">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob2" x="784" y="980">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob3" x="784" y="1022">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob4" x="784" y="1064">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob5" x="784" y="1106">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Page4:Knob6" x="784" y="1148">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet i" uuid="aae2176b26209e34e4fdeba5edb1ace82d178655" name="PageIndex" x="784" y="1190">
+            <params/>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="UI Controls" outlet="Button A"/>
+               <dest obj="axoCtl4PageUpDown_1" inlet="Button Down"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Button B"/>
+               <dest obj="axoCtl4PageUpDown_1" inlet="Button Up"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Bottom Knob A"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob1"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Bottom Knob B"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob2"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Bottom Knob C"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob3"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Top Knob A"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob4"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Top Knob B"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob5"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Top Knob C"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="Knob6"/>
+            </net>
+            <net>
+               <source obj="axoCtl4PageUpDown_1" outlet="LED A State"/>
+               <dest obj="patcher_1" inlet="Led A  On/Off"/>
+            </net>
+            <net>
+               <source obj="axoCtl4PageUpDown_1" outlet="LED B State"/>
+               <dest obj="patcher_1" inlet="Led B On/Off"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob1"/>
+               <dest obj="Page1:Knob1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob2"/>
+               <dest obj="Page1:Knob2" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob3"/>
+               <dest obj="Page1:Knob3" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob4"/>
+               <dest obj="Page1:Knob4" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob5"/>
+               <dest obj="Page1:Knob5" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page1:Knob6"/>
+               <dest obj="Page1:Knob6" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob1"/>
+               <dest obj="Page2:Knob1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob2"/>
+               <dest obj="Page2:Knob2" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob3"/>
+               <dest obj="Page2:Knob3" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob4"/>
+               <dest obj="Page2:Knob4" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob5"/>
+               <dest obj="Page2:Knob5" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page2:Knob6"/>
+               <dest obj="Page2:Knob6" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob1"/>
+               <dest obj="Page3:Knob1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob2"/>
+               <dest obj="Page3:Knob2" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob3"/>
+               <dest obj="Page3:Knob3" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob4"/>
+               <dest obj="Page3:Knob4" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob5"/>
+               <dest obj="Page3:Knob5" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page3:Knob6"/>
+               <dest obj="Page3:Knob6" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob1"/>
+               <dest obj="Page4:Knob1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob2"/>
+               <dest obj="Page4:Knob2" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob3"/>
+               <dest obj="Page4:Knob3" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob4"/>
+               <dest obj="Page4:Knob4" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob5"/>
+               <dest obj="Page4:Knob5" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtlKnobRoute_1" outlet="Page4:Knob6"/>
+               <dest obj="Page4:Knob6" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="axoCtl4PageUpDown_1" outlet="Index Out"/>
+               <dest obj="PageIndex" inlet="outlet"/>
+               <dest obj="axoCtlKnobRoute_1" inlet="PageIndex"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Stick Push"/>
+               <dest obj="patcher_1" inlet="DPad Led On/Off"/>
+               <dest obj="P_CLICK" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Button C"/>
+               <dest obj="patcher_1" inlet="Led C On/Off"/>
+               <dest obj="ButtonC" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Stick Y (Up/Down)"/>
+               <dest obj="Y_UD" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="UI Controls" outlet="Stick X (Left/Right)"/>
+               <dest obj="X_LR" inlet="outlet"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>0</x>
+            <y>23</y>
+            <width>1335</width>
+            <height>929</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="ctrl/button" uuid="ef3d13774349df85aa9bfecf30dbc91ab8488b3f" name="Reset" x="182" y="14">
+      <params>
+         <bool32.mom name="b" value="0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="sss/lfo/BPMext" uuid="7b90c9ef-c596-431d-a030-cf6c78757bca" name="BPMext_1" x="280" y="14">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari1" value="8"/>
+         <int32 name="vari2" value="16"/>
+         <int32 name="vari3" value="2"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1792" y="14">
+      <params/>
+      <attribs/>
+   </obj>
+   <patcher type="patch/patcher" uuid="16fffc9b-a664-4777-828c-5379f34fd8c4" name="Page 1:Drums" x="1176" y="42">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="gao/edrum/bd" uuid="694611b6-de5a-473e-bf41-40e5eafb7555" name="obj_1" x="924" y="14">
+            <params>
+               <frac32.s.map name="freq 1" value="-45.0"/>
+               <frac32.s.map name="noise decay" value="-37.0"/>
+               <frac32.u.map name="noise level" value="50.5"/>
+               <frac32.s.map name="decay" value="5.0"/>
+               <frac32.u.map name="curve" value="32.5"/>
+               <frac32.s.map name="freq 2" value="-43.0"/>
+               <frac32.s.map name="lp:pitch" value="23.0"/>
+               <frac32.u.map name="gain" value="64.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Kick Trig" x="56" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Snare Vel" x="56" y="70">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Snare Trig" x="56" y="112">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="HiHat Closed" x="56" y="154">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="HiHat Open" x="56" y="196">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Clap" x="56" y="238">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_1" x="1218" y="336">
+            <params>
+               <frac32.u.map name="gain1" value="35.0"/>
+               <frac32.u.map name="gain2" value="32.0"/>
+               <frac32.u.map name="gain3" value="26.5"/>
+               <frac32.u.map name="gain4" value="29.5"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="filter/lp1 m" uuid="18b561d14f9175f5380e6a1d9d55ca41e0e61974" name="lp1_1" x="1344" y="336">
+            <params>
+               <frac32.u.map name="freq" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="filter/hp1 m" uuid="db72e08c265817674e56af3855bfca7a58b65e87" name="hp1_1" x="1442" y="336">
+            <params>
+               <frac32.u.map name="freq" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="outlet_1" x="1526" y="336">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 1" x="56" y="364">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="48c7f8f5-d6bd-4c5f-a8b7-2b3a42739124" name="KnobValueLatch" x="350" y="364">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="gao/edrum/snare" uuid="0afd908b-d686-4543-98b7-9d27806104c0" name="obj_4" x="924" y="364">
+            <params>
+               <frac32.s.map name="body decay" value="-35.540000915527344"/>
+               <frac32.s.map name="noise decay" value="-14.0"/>
+               <frac32.s.map name="lp:pitch" value="36.0"/>
+               <frac32.u.map name="lp:reso" value="49.5"/>
+               <frac32.s.map name="notch:pitch" value="-10.0"/>
+               <frac32.u.map name="notch:reso" value="21.0"/>
+               <frac32.u.map name="gain" value="10.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="delay/echo fdbk" uuid="1f4503fa4cd020010f59ce3ffa860caf0cd850c5" name="echo_2" x="1050" y="364">
+            <params/>
+            <attribs>
+               <spinner attributeName="delaylength" value="5000"/>
+            </attribs>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 2" x="56" y="462">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="f335e9ea-21d7-41a2-91a8-1633a19a154d" name="KnobValueLatch_" x="350" y="462">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 3" x="56" y="560">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="5636f2d2-64ea-4c81-823f-63365c369052" name="KnobValueLatch__" x="350" y="560">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="drj/math/inv_pos" uuid="ae23d42592d86ae7d7f2202cb1124490774d118a" name="inv_pos_1" x="1218" y="588">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 4" x="56" y="658">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="aee1045a-6c26-4f01-aea8-947d03ebbaf2" name="KnobValueLatch___" x="350" y="658">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="edrum/hh" uuid="baaf6cec-7634-4f4f-aa6e-0b162e52720e" name="obj_2" x="924" y="672">
+            <params>
+               <frac32.s.map name="env" value="-22.0"/>
+               <frac32.s.map name="bpf:pitch" value="30.0"/>
+               <frac32.u.map name="bpf:reso" value="14.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="mix/mix 2 g" uuid="221f038da51943034a75e442c90624fcebfe6112" name="mix_2" x="1064" y="672">
+            <params>
+               <frac32.u.map name="gain1" value="32.0"/>
+               <frac32.u.map name="gain2" value="32.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 5" x="56" y="756">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="46972359-56ad-482b-9d7b-5a1c04ad9050" name="KnobValueLatch____" x="350" y="756">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="edrum/hh" uuid="baaf6cec-7634-4f4f-aa6e-0b162e52720e" name="obj_3" x="924" y="826">
+            <params>
+               <frac32.s.map name="env" value="-15.0"/>
+               <frac32.s.map name="bpf:pitch" value="30.0"/>
+               <frac32.u.map name="bpf:reso" value="14.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 6" x="56" y="854">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="f9d65981-6ef2-4017-8a43-9d5f8bda431a" name="KnobValueLatch_____" x="350" y="854">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="gao/edrum/clap" uuid="eeb53ef1-e420-4733-8eb9-3dbd9e0e184e" name="obj_5" x="924" y="980">
+            <params>
+               <frac32.s.map name="pulse hp:pitch" value="10.0"/>
+               <frac32.u.map name="pulse hp:reso" value="40.0"/>
+               <frac32.s.map name="ad:a" value="-41.0"/>
+               <frac32.s.map name="ad:d" value="-41.0"/>
+               <frac32.s.map name="fb ad:a" value="-53.0"/>
+               <frac32.s.map name="fb ad:d" value="-16.0"/>
+               <frac32.s.map name="bp:pitch" value="19.0"/>
+               <frac32.u.map name="bp:reso" value="50.5"/>
+               <frac32.s.map name="lp:pitch" value="23.0"/>
+               <frac32.u.map name="lp:reso" value="40.0"/>
+               <frac32.u.map name="gain" value="16.5"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="delay/echo fdbk" uuid="1f4503fa4cd020010f59ce3ffa860caf0cd850c5" name="echo_1" x="1078" y="980">
+            <params/>
+            <attribs>
+               <spinner attributeName="delaylength" value="5000"/>
+            </attribs>
+         </obj>
+         <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="PageIndex" x="56" y="1008">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="Page 2 (index1)" x="154" y="1008">
+            <params/>
+            <attribs>
+               <spinner attributeName="value" value="0"/>
+            </attribs>
+         </obj>
+         <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="Pattern" x="56" y="1120">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/preset" uuid="f7916cc01d45a5b1bbd444216031e0a02cc0b94c" name="preset_1" x="140" y="1120">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Pattern Load" x="56" y="1162">
+            <params/>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="Pattern" outlet="inlet"/>
+               <dest obj="preset_1" inlet="preset"/>
+            </net>
+            <net>
+               <source obj="Pattern Load" outlet="inlet"/>
+               <dest obj="preset_1" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="PageIndex" outlet="inlet"/>
+               <dest obj="Page 2 (index1)" inlet="in"/>
+            </net>
+            <net>
+               <source obj="Knob 1" outlet="inlet"/>
+               <dest obj="KnobValueLatch" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Page 2 (index1)" outlet="out"/>
+               <dest obj="KnobValueLatch____" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch___" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch__" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch_" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch_____" inlet="WatchValue"/>
+            </net>
+            <net>
+               <source obj="Knob 6" outlet="inlet"/>
+               <dest obj="KnobValueLatch_____" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 5" outlet="inlet"/>
+               <dest obj="KnobValueLatch____" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 4" outlet="inlet"/>
+               <dest obj="KnobValueLatch___" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 2" outlet="inlet"/>
+               <dest obj="KnobValueLatch_" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 3" outlet="inlet"/>
+               <dest obj="KnobValueLatch__" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="obj_1" outlet="out"/>
+               <dest obj="mix_1" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="obj_2" outlet="out"/>
+               <dest obj="mix_2" inlet="in1"/>
+            </net>
+            <net>
+               <source obj="obj_3" outlet="out"/>
+               <dest obj="mix_2" inlet="in2"/>
+            </net>
+            <net>
+               <source obj="mix_2" outlet="out"/>
+               <dest obj="mix_1" inlet="in3"/>
+            </net>
+            <net>
+               <source obj="obj_4" outlet="outlet_1"/>
+               <dest obj="echo_2" inlet="in"/>
+            </net>
+            <net>
+               <source obj="obj_5" outlet="outlet_1"/>
+               <dest obj="echo_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="echo_1" outlet="out"/>
+               <dest obj="mix_1" inlet="in4"/>
+            </net>
+            <net>
+               <source obj="echo_2" outlet="out"/>
+               <dest obj="mix_1" inlet="in2"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch" outlet="KnobValueOut"/>
+               <dest obj="obj_1" inlet="decay m"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch____" outlet="KnobValueOut"/>
+               <dest obj="echo_2" inlet="feedback"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch_____" outlet="KnobValueOut"/>
+               <dest obj="echo_1" inlet="feedback"/>
+            </net>
+            <net>
+               <source obj="mix_1" outlet="out"/>
+               <dest obj="lp1_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="lp1_1" outlet="out"/>
+               <dest obj="hp1_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="hp1_1" outlet="out"/>
+               <dest obj="outlet_1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="inv_pos_1" outlet="out"/>
+               <dest obj="lp1_1" inlet="freq"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch_" outlet="KnobValueOut"/>
+               <dest obj="inv_pos_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch__" outlet="KnobValueOut"/>
+               <dest obj="hp1_1" inlet="freq"/>
+            </net>
+            <net>
+               <source obj="Kick Trig" outlet="inlet"/>
+               <dest obj="obj_1" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="Snare Trig" outlet="inlet"/>
+               <dest obj="obj_4" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="HiHat Closed" outlet="inlet"/>
+               <dest obj="obj_2" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="HiHat Open" outlet="inlet"/>
+               <dest obj="obj_3" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="Clap" outlet="inlet"/>
+               <dest obj="obj_5" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="Snare Vel" outlet="inlet"/>
+               <dest obj="obj_4" inlet="velocity"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>0</x>
+            <y>23</y>
+            <width>1914</width>
+            <height>1013</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="mix/mix 4 g" uuid="36f472cd81da2e17bd4b4ee11b53b4c82527220c" name="mix_1" x="1358" y="42">
+      <params>
+         <frac32.u.map name="gain1" value="37.0"/>
+         <frac32.u.map name="gain2" value="18.0"/>
+         <frac32.u.map name="gain3" value="32.0"/>
+         <frac32.u.map name="gain4" value="32.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1498" y="42" text="Effects Page (Stereo)"/>
+   <patcher type="patch/patcher" uuid="ef90f8ea-d01a-4b1b-b552-cb750a235d7a" name="patcher_2" x="700" y="154">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Beat In" x="56" y="126">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_1" x="182" y="126">
+            <params>
+               <int32 name="maximum" value="16"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="Beat" x="308" y="126">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Fourths In" x="56" y="196">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_2" x="182" y="196">
+            <params>
+               <int32 name="maximum" value="16"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="disp/ibar 16" uuid="302bfed4cde8894229679ce81f6b8a5c5212dd98" name="Quarter" x="308" y="196">
+            <params/>
+            <attribs/>
+         </obj>
+         <nets>
+            <net>
+               <source obj="counter_1" outlet="o"/>
+               <dest obj="Beat" inlet="in"/>
+            </net>
+            <net>
+               <source obj="counter_2" outlet="o"/>
+               <dest obj="Quarter" inlet="in"/>
+            </net>
+            <net>
+               <source obj="Fourths In" outlet="inlet"/>
+               <dest obj="counter_2" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="Beat In" outlet="inlet"/>
+               <dest obj="counter_1" inlet="trig"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>555</x>
+            <y>218</y>
+            <width>1152</width>
+            <height>693</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_2" x="140" y="238">
+      <params/>
+      <attribs/>
+   </obj>
+   <patcher type="patch/patcher" uuid="84315f2d-ea21-4bb1-9ee0-11e4876943a2" name="Page 2:Bass" x="1176" y="378">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Base Note In" x="42" y="14">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="osc/brds/trianglefold" uuid="8e4b08de-947e-4c8b-940d-48e51aa96e94" name="trianglefold_2" x="784" y="28">
+            <params>
+               <frac32.s.map name="pitch" value="0.0"/>
+               <frac32.u.map name="timbre" value="0.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="sss/dist/saturator" uuid="41495e37-8b0a-41cf-8119-ddc58734e89f" name="saturator_2" x="910" y="28">
+            <params>
+               <frac32.u.map name="amp" value="27.5"/>
+               <frac32.u.map name="strength" value="30.0"/>
+               <frac32.u.map name="max" value="49.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="filter/vcf" uuid="2b0aad6aeb06cc86c5802d2f167e9f281d8c35e1" name="vcf_2" x="1036" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="1204" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet a" uuid="abd8c5fd3b0524a6630f65cad6dc27f6c58e2a3e" name="outlet_1" x="1274" y="28">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Base Gate In" x="42" y="56">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Base Timbre" x="42" y="98">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Base Velocity" x="42" y="140">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="env/hd lin m" uuid="d587c40eeaf1152b109e2316cbaa9f7ada7b2edf" name="hd_1" x="910" y="182">
+            <params>
+               <frac32.s.map name="d" value="3.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 1" x="42" y="224">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="2e0288a1-0e9a-4808-aee9-47af973d7905" name="KnobValueLatch" x="336" y="224">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 2" x="42" y="336">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="b6a1f4ab-22f1-4a94-9733-33ccdd12cdec" name="KnobValueLatch_" x="336" y="336">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 3" x="42" y="448">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="5bbc60f9-8008-40d2-94ab-a5324db2bfce" name="KnobValueLatch__" x="336" y="448">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 4" x="42" y="560">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="f0d3abfb-9bab-42f8-8858-be84272d500d" name="KnobValueLatch___" x="336" y="560">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 5" x="42" y="672">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="f454aa8e-3080-4257-ba23-b6ca7679f8c5" name="KnobValueLatch____" x="336" y="672">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="Knob 6" x="42" y="784">
+            <params/>
+            <attribs/>
+         </obj>
+         <patcher type="patch/patcher" uuid="e3dbb150-448b-4ffe-8721-ca2031eb9813" name="KnobValueLatch_____" x="336" y="784">
+            <params/>
+            <attribs/>
+            <subpatch appVersion="1.0.12">
+               <obj type="patch/inlet f" uuid="5c585d2dcd9c05631e345ac09626a22a639d7c13" name="KnobValue" x="28" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="rbrt/control/gate_hold" uuid="4c315d47-8c76-4c21-bf06-e3d5001b8c21" name="gate_hold_1" x="266" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="KnobValueOut" x="420" y="70">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="math/==" uuid="d80966871d5328696da567bba03c3fa83060f08d" name="==_1" x="266" y="126">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="WatchValue" x="28" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <obj type="logic/and 2" uuid="c67031682f552aa0a80b23377495c51ea28a8c9c" name="and_1" x="266" y="182">
+                  <params/>
+                  <attribs/>
+               </obj>
+               <nets>
+                  <net>
+                     <source obj="KnobValue" outlet="inlet"/>
+                     <dest obj="gate_hold_1" inlet="in"/>
+                     <dest obj="==_1" inlet="in1"/>
+                  </net>
+                  <net>
+                     <source obj="gate_hold_1" outlet="out"/>
+                     <dest obj="==_1" inlet="in2"/>
+                     <dest obj="KnobValueOut" inlet="outlet"/>
+                  </net>
+                  <net>
+                     <source obj="==_1" outlet="out"/>
+                     <dest obj="and_1" inlet="i2"/>
+                  </net>
+                  <net>
+                     <source obj="and_1" outlet="o"/>
+                     <dest obj="gate_hold_1" inlet="gate"/>
+                  </net>
+                  <net>
+                     <source obj="WatchValue" outlet="inlet"/>
+                     <dest obj="and_1" inlet="i1"/>
+                  </net>
+               </nets>
+               <settings>
+                  <subpatchmode>no</subpatchmode>
+               </settings>
+               <notes><![CDATA[]]></notes>
+               <windowPos>
+                  <x>492</x>
+                  <y>153</y>
+                  <width>866</width>
+                  <height>611</height>
+               </windowPos>
+            </subpatch>
+         </patcher>
+         <obj type="patch/inlet i" uuid="f11927f00c59219df0c50f73056aa19f125540b7" name="PageIndex" x="42" y="938">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="drj/math/== const i" uuid="36ae23539d64bc2fb798a1b4a65cf9dda17a1952" name="Page 2 (index1)" x="140" y="938">
+            <params/>
+            <attribs>
+               <spinner attributeName="value" value="1"/>
+            </attribs>
+         </obj>
+         <nets>
+            <net>
+               <source obj="PageIndex" outlet="inlet"/>
+               <dest obj="Page 2 (index1)" inlet="in"/>
+            </net>
+            <net>
+               <source obj="Knob 1" outlet="inlet"/>
+               <dest obj="KnobValueLatch" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Page 2 (index1)" outlet="out"/>
+               <dest obj="KnobValueLatch_____" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch____" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch___" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch__" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch_" inlet="WatchValue"/>
+               <dest obj="KnobValueLatch" inlet="WatchValue"/>
+            </net>
+            <net>
+               <source obj="Knob 6" outlet="inlet"/>
+               <dest obj="KnobValueLatch_____" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 5" outlet="inlet"/>
+               <dest obj="KnobValueLatch____" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 4" outlet="inlet"/>
+               <dest obj="KnobValueLatch___" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 2" outlet="inlet"/>
+               <dest obj="KnobValueLatch_" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="Knob 3" outlet="inlet"/>
+               <dest obj="KnobValueLatch__" inlet="KnobValue"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch____" outlet="KnobValueOut"/>
+               <dest obj="vcf_2" inlet="frequency"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch_____" outlet="KnobValueOut"/>
+               <dest obj="vcf_2" inlet="reso"/>
+            </net>
+            <net>
+               <source obj="trianglefold_2" outlet="wave"/>
+               <dest obj="saturator_2" inlet="in"/>
+            </net>
+            <net>
+               <source obj="saturator_2" outlet="out"/>
+               <dest obj="vcf_2" inlet="in"/>
+            </net>
+            <net>
+               <source obj="vcf_2" outlet="out"/>
+               <dest obj="vca_2" inlet="a"/>
+            </net>
+            <net>
+               <source obj="hd_1" outlet="env"/>
+               <dest obj="vca_2" inlet="v"/>
+            </net>
+            <net>
+               <source obj="Base Gate In" outlet="inlet"/>
+               <dest obj="hd_1" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="KnobValueLatch" outlet="KnobValueOut"/>
+               <dest obj="hd_1" inlet="d"/>
+            </net>
+            <net>
+               <source obj="vca_2" outlet="o"/>
+               <dest obj="outlet_1" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="Base Note In" outlet="inlet"/>
+               <dest obj="trianglefold_2" inlet="pitch"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>normal</subpatchmode>
+            <MidiChannel>1</MidiChannel>
+            <NPresets>8</NPresets>
+            <NPresetEntries>32</NPresetEntries>
+            <NModulationSources>8</NModulationSources>
+            <NModulationTargetsPerSource>8</NModulationTargetsPerSource>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>0</x>
+            <y>23</y>
+            <width>1920</width>
+            <height>1013</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <obj type="disp/i" uuid="5e35fd0c62d81e70017289250cf28edd26e19e4a" name="i_1" x="112" y="490">
+      <params/>
+      <attribs/>
+   </obj>
+   <comment type="patch/comment" x="1176" y="630" text="Lead Page"/>
+   <patcher type="patch/patcher" uuid="716d2d50-e948-4b5d-a523-1372826ab812" name="patcher_1" x="630" y="700">
+      <params/>
+      <attribs/>
+      <subpatch appVersion="1.0.12">
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Beat" x="14" y="14">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Kick Trig" x="1386" y="14">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="2nds" x="14" y="70">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Snare Trig" x="1386" y="70">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="4ths" x="14" y="126">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet f" uuid="d18a9a550bcaaebac94e25983bd0e27dbfd7233c" name="Snare Vel" x="1386" y="126">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="8ths" x="14" y="182">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Hi Hat Closed" x="1386" y="182">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="16ths" x="14" y="238">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Hi Hat Open" x="1386" y="238">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel b 16 2t pulse" uuid="973e7030204ae3f80968263d37625c6672f91cb1" name="sel_4" x="378" y="252">
+            <params>
+               <bin16 name="p1" value="5393">
+                  <presets>
+                     <preset index="1">
+                        <i i="4369"/>
+                     </preset>
+                  </presets>
+               </bin16>
+               <bin16 name="p2" value="21845">
+                  <presets>
+                     <preset index="1">
+                        <i i="17476"/>
+                     </preset>
+                  </presets>
+               </bin16>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_1" x="700" y="266">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="32nds" x="14" y="294">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Clap" x="1386" y="294">
+            <params/>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="308" y="322" text="Kick Drum"/>
+         <comment type="patch/comment" x="308" y="336" text="Snare Drum"/>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="trips" x="14" y="350">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel b 16 2t pulse" uuid="973e7030204ae3f80968263d37625c6672f91cb1" name="sel_5" x="378" y="350">
+            <params>
+               <bin16 name="p1" value="21777">
+                  <presets>
+                     <preset index="1">
+                        <i i="37137"/>
+                     </preset>
+                  </presets>
+               </bin16>
+               <bin16 name="p2" value="21845">
+                  <presets>
+                     <preset index="1">
+                        <i i="17476"/>
+                     </preset>
+                  </presets>
+               </bin16>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_2" x="700" y="350">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Bass" x="1386" y="350">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/inlet b" uuid="3b0d3eacb5bb978cb05d1372aa2714d5a4790844" name="Reset" x="14" y="406">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="patch/outlet b" uuid="191792f616d4835dba0b55375474a12942e5bcbd" name="Lead" x="1386" y="406">
+            <params/>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="308" y="420" text="Kick Drum"/>
+         <comment type="patch/comment" x="308" y="434" text="Snare Drum"/>
+         <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_3" x="294" y="448">
+            <params>
+               <int32 name="maximum" value="32"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel fp 32" uuid="623fc3ca176bfeb7eb7328cfe7212c2ecbbb19c7" name="sel_1" x="378" y="448">
+            <params>
+               <frac32.u.mapvsl name="b0" value="55.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="55.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.mapvsl>
+               <frac32.u.mapvsl name="b1" value="57.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="57.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.mapvsl>
+               <frac32.u.mapvsl name="b2" value="47.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="47.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.mapvsl>
+               <frac32.u.mapvsl name="b3" value="50.5">
+                  <presets>
+                     <preset index="1">
+                        <f v="50.5"/>
+                     </preset>
+                  </presets>
+               </frac32.u.mapvsl>
+               <frac32.u.mapvsl name="b4" value="57.5"/>
+               <frac32.u.mapvsl name="b5" value="49.5"/>
+               <frac32.u.mapvsl name="b6" value="48.5"/>
+               <frac32.u.mapvsl name="b7" value="53.0"/>
+               <frac32.u.mapvsl name="b8" value="54.5"/>
+               <frac32.u.mapvsl name="b9" value="48.5"/>
+               <frac32.u.mapvsl name="b10" value="55.0"/>
+               <frac32.u.mapvsl name="b11" value="51.0"/>
+               <frac32.u.mapvsl name="b12" value="58.0"/>
+               <frac32.u.mapvsl name="b13" value="56.0"/>
+               <frac32.u.mapvsl name="b14" value="55.0"/>
+               <frac32.u.mapvsl name="b15" value="52.5"/>
+               <frac32.u.mapvsl name="b16" value="58.5"/>
+               <frac32.u.mapvsl name="b17" value="54.0"/>
+               <frac32.u.mapvsl name="b18" value="47.5"/>
+               <frac32.u.mapvsl name="b19" value="49.5"/>
+               <frac32.u.mapvsl name="b20" value="55.0">
+                  <presets>
+                     <preset index="1">
+                        <f v="55.0"/>
+                     </preset>
+                  </presets>
+               </frac32.u.mapvsl>
+               <frac32.u.mapvsl name="b21" value="53.0"/>
+               <frac32.u.mapvsl name="b22" value="49.5"/>
+               <frac32.u.mapvsl name="b23" value="52.0"/>
+               <frac32.u.mapvsl name="b24" value="54.0"/>
+               <frac32.u.mapvsl name="b25" value="48.5"/>
+               <frac32.u.mapvsl name="b26" value="50.0"/>
+               <frac32.u.mapvsl name="b27" value="53.0"/>
+               <frac32.u.mapvsl name="b28" value="56.5"/>
+               <frac32.u.mapvsl name="b29" value="54.5"/>
+               <frac32.u.mapvsl name="b30" value="50.5"/>
+               <frac32.u.mapvsl name="b31" value="53.0"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="logic/counter" uuid="7a141ba82230e54e5f5cd12da5dbe5a74ba854a5" name="counter_2" x="294" y="630">
+            <params>
+               <int32 name="maximum" value="32"/>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_2" x="378" y="630">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sel/sel b 16 2t pulse" uuid="973e7030204ae3f80968263d37625c6672f91cb1" name="sel_6" x="378" y="686">
+            <params>
+               <bin16 name="p1" value="21781">
+                  <presets>
+                     <preset index="1">
+                        <i i="17685"/>
+                     </preset>
+                  </presets>
+               </bin16>
+               <bin16 name="p2" value="18705">
+                  <presets>
+                     <preset index="1">
+                        <i i="18705"/>
+                     </preset>
+                  </presets>
+               </bin16>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_3" x="658" y="686">
+            <params/>
+            <attribs/>
+         </obj>
+         <obj type="sss/logic/ABchance" uuid="cc33a53f-8a7d-4833-9b38-7bff3e3f0cdb" name="ABchance_1" x="784" y="686">
+            <params>
+               <frac32.u.map name="Bchance" value="20.5"/>
+            </params>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="896" y="714" text="Closed"/>
+         <comment type="patch/comment" x="896" y="728" text="Open"/>
+         <comment type="patch/comment" x="336" y="756" text="HiHat"/>
+         <comment type="patch/comment" x="336" y="770" text="Tom"/>
+         <obj type="sel/sel b 16 2t pulse" uuid="973e7030204ae3f80968263d37625c6672f91cb1" name="sel_7" x="378" y="784">
+            <params>
+               <bin16 name="p1" value="10580">
+                  <presets>
+                     <preset index="1">
+                        <i i="10564"/>
+                     </preset>
+                  </presets>
+               </bin16>
+               <bin16 name="p2" value="18705">
+                  <presets>
+                     <preset index="1">
+                        <i i="18705"/>
+                     </preset>
+                  </presets>
+               </bin16>
+            </params>
+            <attribs/>
+         </obj>
+         <obj type="logic/or 2" uuid="3805d3c84d30032a44fbdbe42d9a2988a1790a3e" name="or_4" x="784" y="798">
+            <params/>
+            <attribs/>
+         </obj>
+         <comment type="patch/comment" x="336" y="854" text="HiHat"/>
+         <comment type="patch/comment" x="336" y="868" text="Tom"/>
+         <nets>
+            <net>
+               <source obj="Reset" outlet="inlet"/>
+               <dest obj="counter_3" inlet="r"/>
+               <dest obj="counter_2" inlet="r"/>
+            </net>
+            <net>
+               <source obj="counter_2" outlet="o"/>
+               <dest obj="sel_6" inlet="in"/>
+               <dest obj="ibar_2" inlet="in"/>
+            </net>
+            <net>
+               <source obj="sel_4" outlet="chain"/>
+               <dest obj="sel_5" inlet="in"/>
+            </net>
+            <net>
+               <source obj="sel_5" outlet="o1"/>
+               <dest obj="or_1" inlet="i2"/>
+            </net>
+            <net>
+               <source obj="sel_4" outlet="o1"/>
+               <dest obj="or_1" inlet="i1"/>
+            </net>
+            <net>
+               <source obj="sel_5" outlet="o2"/>
+               <dest obj="or_2" inlet="i2"/>
+            </net>
+            <net>
+               <source obj="sel_4" outlet="o2"/>
+               <dest obj="or_2" inlet="i1"/>
+            </net>
+            <net>
+               <source obj="sel_6" outlet="chain"/>
+               <dest obj="sel_7" inlet="in"/>
+            </net>
+            <net>
+               <source obj="sel_7" outlet="o1"/>
+               <dest obj="or_3" inlet="i2"/>
+            </net>
+            <net>
+               <source obj="sel_6" outlet="o1"/>
+               <dest obj="or_3" inlet="i1"/>
+            </net>
+            <net>
+               <source obj="sel_7" outlet="o2"/>
+               <dest obj="or_4" inlet="i2"/>
+            </net>
+            <net>
+               <source obj="sel_6" outlet="o2"/>
+               <dest obj="or_4" inlet="i1"/>
+            </net>
+            <net>
+               <source obj="or_3" outlet="o"/>
+               <dest obj="ABchance_1" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="4ths" outlet="inlet"/>
+               <dest obj="counter_3" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="16ths" outlet="inlet"/>
+               <dest obj="counter_2" inlet="trig"/>
+            </net>
+            <net>
+               <source obj="ABchance_1" outlet="A"/>
+               <dest obj="Hi Hat Closed" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="ABchance_1" outlet="B"/>
+               <dest obj="Hi Hat Open" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="or_4" outlet="o"/>
+               <dest obj="Clap" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="or_2" outlet="o"/>
+               <dest obj="Snare Trig" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="or_1" outlet="o"/>
+               <dest obj="Kick Trig" inlet="outlet"/>
+            </net>
+            <net>
+               <source obj="counter_3" outlet="o"/>
+               <dest obj="sel_1" inlet="in"/>
+            </net>
+            <net>
+               <source obj="sel_1" outlet="o"/>
+               <dest obj="Snare Vel" inlet="outlet"/>
+            </net>
+         </nets>
+         <settings>
+            <subpatchmode>no</subpatchmode>
+         </settings>
+         <notes><![CDATA[]]></notes>
+         <windowPos>
+            <x>0</x>
+            <y>591</y>
+            <width>1803</width>
+            <height>514</height>
+         </windowPos>
+      </subpatch>
+   </patcher>
+   <comment type="patch/comment" x="196" y="756" text="Use DPad For Effects Control"/>
+   <obj type="disp/bool" uuid="a0ee71d48208b71752cbb8c05e55145106ef3946" name="bool_1" x="196" y="770">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_5" x="266" y="770">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="disp/dial p" uuid="44fd18b562e434b3230441681132dbeabb15cdc5" name="dial_6" x="336" y="770">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="AxoCtrlOut" outlet="P_CLICK"/>
+         <dest obj="bool_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="X_LR"/>
+         <dest obj="dial_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Y_UD"/>
+         <dest obj="dial_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="ButtonC"/>
+         <dest obj="bool_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="PageIndex"/>
+         <dest obj="i_1" inlet="in"/>
+         <dest obj="Page 2:Bass" inlet="PageIndex"/>
+         <dest obj="Page 1:Drums" inlet="PageIndex"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob1"/>
+         <dest obj="Page 2:Bass" inlet="Knob 1"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob3"/>
+         <dest obj="Page 2:Bass" inlet="Knob 3"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob4"/>
+         <dest obj="Page 2:Bass" inlet="Knob 4"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob5"/>
+         <dest obj="Page 2:Bass" inlet="Knob 5"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob6"/>
+         <dest obj="Page 2:Bass" inlet="Knob 6"/>
+      </net>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="Page 2:Bass" outlet="outlet_1"/>
+         <dest obj="mix_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="Page 1:Drums" outlet="outlet_1"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob1"/>
+         <dest obj="Page 1:Drums" inlet="Knob 1"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob2"/>
+         <dest obj="Page 1:Drums" inlet="Knob 2"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob3"/>
+         <dest obj="Page 1:Drums" inlet="Knob 3"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob4"/>
+         <dest obj="Page 1:Drums" inlet="Knob 4"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob5"/>
+         <dest obj="Page 1:Drums" inlet="Knob 5"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page1:Knob6"/>
+         <dest obj="Page 1:Drums" inlet="Knob 6"/>
+      </net>
+      <net>
+         <source obj="AxoCtrlOut" outlet="Page2:Knob2"/>
+         <dest obj="Page 2:Bass" inlet="Knob 2"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="beat"/>
+         <dest obj="patcher_1" inlet="Beat"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="trips"/>
+         <dest obj="patcher_1" inlet="trips"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="32"/>
+         <dest obj="patcher_1" inlet="32nds"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari2"/>
+         <dest obj="patcher_1" inlet="16ths"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari1"/>
+         <dest obj="patcher_1" inlet="8ths"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari3"/>
+         <dest obj="patcher_1" inlet="2nds"/>
+      </net>
+      <net>
+         <source obj="patcher_1" outlet="Kick Trig"/>
+         <dest obj="Page 1:Drums" inlet="Kick Trig"/>
+      </net>
+      <net>
+         <source obj="patcher_1" outlet="Snare Trig"/>
+         <dest obj="Page 1:Drums" inlet="Snare Trig"/>
+      </net>
+      <net>
+         <source obj="patcher_1" outlet="Hi Hat Closed"/>
+         <dest obj="Page 1:Drums" inlet="HiHat Closed"/>
+      </net>
+      <net>
+         <source obj="patcher_1" outlet="Hi Hat Open"/>
+         <dest obj="Page 1:Drums" inlet="HiHat Open"/>
+      </net>
+      <net>
+         <source obj="patcher_1" outlet="Clap"/>
+         <dest obj="Page 1:Drums" inlet="Clap"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>0</x>
+      <y>143</y>
+      <width>1917</width>
+      <height>985</height>
+   </windowPos>
+</patch-1.0>

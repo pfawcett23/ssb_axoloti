@@ -1,0 +1,167 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="sss/lfo/BPMext" uuid="7b90c9ef-c596-431d-a030-cf6c78757bca" name="BPMext_1" x="168" y="56">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari1" value="8"/>
+         <int32 name="vari2" value="16"/>
+         <int32 name="vari3" value="2"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_1" x="420" y="56">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_1" x="504" y="56">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_2" x="420" y="140">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_2" x="504" y="140">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_3" x="420" y="224">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_3" x="504" y="224">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_4" x="420" y="308">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_4" x="504" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_5" x="420" y="392">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_5" x="504" y="392">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_6" x="420" y="476">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_6" x="504" y="476">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_7" x="420" y="560">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_7" x="504" y="560">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="logic/counter2" uuid="d9536f238ab92e53ac93d5927c3b43ceef998dc1" name="counter2_8" x="420" y="644">
+      <params>
+         <int32 name="maximum" value="32"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="disp/ibar 32" uuid="8ec034ef194146b746e2c4c1ec30350f4157d51a" name="ibar_8" x="504" y="644">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="BPMext_1" outlet="beat"/>
+         <dest obj="counter2_1" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="counter2_1" outlet="o"/>
+         <dest obj="ibar_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_2" outlet="o"/>
+         <dest obj="ibar_2" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_3" outlet="o"/>
+         <dest obj="ibar_3" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_4" outlet="o"/>
+         <dest obj="ibar_4" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_5" outlet="o"/>
+         <dest obj="ibar_5" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_6" outlet="o"/>
+         <dest obj="ibar_6" inlet="in"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="fours"/>
+         <dest obj="counter2_2" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="32"/>
+         <dest obj="counter2_3" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="64"/>
+         <dest obj="counter2_4" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="trips"/>
+         <dest obj="counter2_5" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari1"/>
+         <dest obj="counter2_6" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="counter2_7" outlet="o"/>
+         <dest obj="ibar_7" inlet="in"/>
+      </net>
+      <net>
+         <source obj="counter2_8" outlet="o"/>
+         <dest obj="ibar_8" inlet="in"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari2"/>
+         <dest obj="counter2_7" inlet="inc"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari3"/>
+         <dest obj="counter2_8" inlet="inc"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>301</x>
+      <y>59</y>
+      <width>1507</width>
+      <height>892</height>
+   </windowPos>
+</patch-1.0>

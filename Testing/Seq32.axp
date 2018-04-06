@@ -1,0 +1,118 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="sss/lfo/BPMext" uuid="7b90c9ef-c596-431d-a030-cf6c78757bca" name="BPMext_1" x="84" y="70">
+      <params>
+         <int32 name="BPM" value="120"/>
+         <int32 name="vari1" value="8"/>
+         <int32 name="vari2" value="16"/>
+         <int32 name="vari3" value="2"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/seq/sel_b_32_gatewidth" uuid="3d9a2235-1d68-4433-971a-ef025770ee6b" name="sel_b_32_gatewidth_1" x="252" y="70">
+      <params>
+         <int32 name="Step Count (32 Max)" value="32"/>
+         <frac32.s.map name="Gate Length" value="-44.0"/>
+         <bin16 name="Steps 1-16" value="257"/>
+         <bin16 name="Steps 17-32" value="4097"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="edrum/hh" uuid="4788ecac-d45b-4271-aeb3-6a2bcee46e6e" name="obj_2" x="616" y="70">
+      <params>
+         <frac32.s.map name="env" value="4.0"/>
+         <frac32.s.map name="bpf:pitch" value="56.0"/>
+         <frac32.u.map name="bpf:reso" value="40.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 8 g" uuid="ca3c8ec626ad31e48d8374d5dd44962bf3bd7e6f" name="mix_1" x="1204" y="70">
+      <params>
+         <frac32.u.map name="gain1" value="0.0"/>
+         <frac32.u.map name="gain2" value="0.0"/>
+         <frac32.u.map name="gain3" value="34.0"/>
+         <frac32.u.map name="gain4" value="0.5"/>
+         <frac32.u.map name="gain5" value="0.0"/>
+         <frac32.u.map name="gain6" value="0.0"/>
+         <frac32.u.map name="gain7" value="0.0"/>
+         <frac32.u.map name="gain8" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1330" y="70">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="./../ssb_library/seq/sel_b_32_gatewidth" uuid="3d9a2235-1d68-4433-971a-ef025770ee6b" name="sel_b_32_gatewidth_2" x="252" y="224">
+      <params>
+         <int32 name="Step Count (32 Max)" value="32"/>
+         <frac32.s.map name="Gate Length" value="-44.0"/>
+         <bin16 name="Steps 1-16" value="4096"/>
+         <bin16 name="Steps 17-32" value="256"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gao/edrum/hihat" uuid="28b8259b-f505-49f5-8be4-36e45a22f4f6" name="obj_1" x="616" y="224">
+      <params>
+         <frac32.s.map name="bp:pitch" value="53.0"/>
+         <frac32.s.map name="closed decay:d" value="-22.0"/>
+         <frac32.s.map name="hp closed:pitch" value="49.0"/>
+         <frac32.u.map name="hp closed:reso" value="47.5"/>
+         <frac32.u.map name="gain closed" value="62.0"/>
+         <frac32.s.map name="open decay" value="-3.0"/>
+         <frac32.s.map name="hp open:pitch" value="49.0"/>
+         <frac32.u.map name="hp open:reso" value="47.5"/>
+         <frac32.u.map name="gain open" value="60.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial b" uuid="862e7d7f29093cb1ce4aed72244d118ad4d46692" name="dial_1" x="350" y="672">
+      <params>
+         <frac32.s.map name="value" value="43.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="out_1" inlet="left"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="sel_b_32_gatewidth_1" outlet="Trig Out"/>
+         <dest obj="obj_2" inlet="trig"/>
+         <dest obj="obj_1" inlet="closed"/>
+      </net>
+      <net>
+         <source obj="obj_2" outlet="out"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="obj_1" outlet="outlet_1"/>
+         <dest obj="mix_1" inlet="in3"/>
+      </net>
+      <net>
+         <source obj="dial_1" outlet="out"/>
+         <dest obj="obj_1" inlet="closed velocity"/>
+         <dest obj="obj_1" inlet="open velocity"/>
+      </net>
+      <net>
+         <source obj="sel_b_32_gatewidth_2" outlet="Trig Out"/>
+         <dest obj="obj_1" inlet="open"/>
+      </net>
+      <net>
+         <source obj="BPMext_1" outlet="vari1"/>
+         <dest obj="sel_b_32_gatewidth_2" inlet="Clock In"/>
+         <dest obj="sel_b_32_gatewidth_1" inlet="Clock In"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>375</x>
+      <y>23</y>
+      <width>1545</width>
+      <height>1013</height>
+   </windowPos>
+</patch-1.0>

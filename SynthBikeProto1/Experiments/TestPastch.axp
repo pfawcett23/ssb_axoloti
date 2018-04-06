@@ -1,0 +1,181 @@
+<patch-1.0 appVersion="1.0.12">
+   <obj type="a773/axocontrol" uuid="751b3605-f062-4660-8406-3eb1c2b3d526" name="axocontrol_1" x="42" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="osc/brds/plucked" uuid="e78bfbb5-2963-49a0-8863-dead044d748c" name="plucked_1" x="462" y="84">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="timbre" value="0.0"/>
+         <frac32.u.map name="color" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_1" x="602" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="delay/echo fdbk mix" uuid="15716b14ebe691010ccfd54af72ea23232a843c6" name="echo_1" x="686" y="84">
+      <params>
+         <frac32.u.map name="mix" value="0.0"/>
+         <frac32.u.map name="feedback" value="0.0"/>
+      </params>
+      <attribs>
+         <spinner attributeName="delaylength" value="5000"/>
+      </attribs>
+   </obj>
+   <obj type="jt/filter/vcf4pole2x" uuid="f0ea35e9-a9c5-445e-8868-79b556d5d5c3" name="vcf4pole2x_1" x="1022" y="84">
+      <params>
+         <frac32.s.map name="pitch" value="0.0"/>
+         <frac32.u.map name="reso" value="42.5"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_2" x="1162" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="audio/out stereo" uuid="a1ca7a567f535acc21055669829101d3ee7f0189" name="out_1" x="1232" y="84">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 2 g" uuid="a68d65dda222bc916b36b283cc06d2edd719bf3b" name="mix_1" x="896" y="98">
+      <params>
+         <frac32.u.map name="gain1" value="64.0"/>
+         <frac32.u.map name="gain2" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="gain/vca" uuid="a9f2dcd18043e2f47364e45cb8814f63c2a37c0d" name="vca_3" x="1162" y="154">
+      <params/>
+      <attribs/>
+   </obj>
+   <obj type="mix/mix 1 g" uuid="2065eeca525a4691f1bc08a7dc5468871de651b7" name="mix_2" x="308" y="280">
+      <params>
+         <frac32.u.map name="gain1" value="64.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="env/ahd m" uuid="26310a6ba00395d4adb87ebf9db0de38d53d23da" name="ahd_1" x="462" y="280">
+      <params>
+         <frac32.u.map name="a" value="0.0"/>
+         <frac32.u.map name="d" value="0.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="env/ahd m" uuid="26310a6ba00395d4adb87ebf9db0de38d53d23da" name="ahd_2" x="686" y="280">
+      <params>
+         <frac32.u.map name="a" value="11.5"/>
+         <frac32.u.map name="d" value="39.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="ctrl/dial p" uuid="cc5d2846c3d50e425f450c4b9851371b54f4d674" name="dial_1" x="238" y="294">
+      <params>
+         <frac32.u.map name="value" value="29.0"/>
+      </params>
+      <attribs/>
+   </obj>
+   <obj type="midi/in/keyb" uuid="53b04874696932f38aceaa168bd5d9efb743716d" name="keyb_1" x="56" y="308">
+      <params/>
+      <attribs/>
+   </obj>
+   <nets>
+      <net>
+         <source obj="keyb_1" outlet="gate"/>
+         <dest obj="plucked_1" inlet="strike"/>
+         <dest obj="ahd_1" inlet="gate"/>
+         <dest obj="ahd_2" inlet="gate"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob2"/>
+         <dest obj="plucked_1" inlet="color"/>
+      </net>
+      <net>
+         <source obj="keyb_1" outlet="note"/>
+         <dest obj="plucked_1" inlet="pitch"/>
+         <dest obj="mix_1" inlet="bus_in"/>
+      </net>
+      <net>
+         <source obj="plucked_1" outlet="wave"/>
+         <dest obj="vca_1" inlet="a"/>
+      </net>
+      <net>
+         <source obj="ahd_1" outlet="env"/>
+         <dest obj="vca_1" inlet="v"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob6"/>
+         <dest obj="vca_2" inlet="v"/>
+         <dest obj="vca_3" inlet="v"/>
+      </net>
+      <net>
+         <source obj="vca_2" outlet="o"/>
+         <dest obj="out_1" inlet="left"/>
+      </net>
+      <net>
+         <source obj="vca_3" outlet="o"/>
+         <dest obj="out_1" inlet="right"/>
+      </net>
+      <net>
+         <source obj="keyb_1" outlet="velocity"/>
+         <dest obj="plucked_1" inlet="timbre"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob3"/>
+         <dest obj="mix_2" inlet="bus_in"/>
+      </net>
+      <net>
+         <source obj="vca_1" outlet="o"/>
+         <dest obj="echo_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="echo_1" outlet="out"/>
+         <dest obj="vcf4pole2x_1" inlet="in"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob4"/>
+         <dest obj="echo_1" inlet="feedback"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob5"/>
+         <dest obj="echo_1" inlet="mix"/>
+      </net>
+      <net>
+         <source obj="vcf4pole2x_1" outlet="out"/>
+         <dest obj="vca_2" inlet="a"/>
+         <dest obj="vca_3" inlet="a"/>
+      </net>
+      <net>
+         <source obj="axocontrol_1" outlet="knob1"/>
+         <dest obj="mix_1" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="mix_1" outlet="out"/>
+         <dest obj="vcf4pole2x_1" inlet="pitch"/>
+      </net>
+      <net>
+         <source obj="ahd_2" outlet="env"/>
+         <dest obj="mix_1" inlet="in2"/>
+      </net>
+      <net>
+         <source obj="dial_1" outlet="out"/>
+         <dest obj="mix_2" inlet="in1"/>
+      </net>
+      <net>
+         <source obj="mix_2" outlet="out"/>
+         <dest obj="ahd_1" inlet="d"/>
+         <dest obj="ahd_2" inlet="d"/>
+      </net>
+   </nets>
+   <settings>
+      <subpatchmode>no</subpatchmode>
+   </settings>
+   <notes><![CDATA[]]></notes>
+   <windowPos>
+      <x>362</x>
+      <y>23</y>
+      <width>1357</width>
+      <height>910</height>
+   </windowPos>
+</patch-1.0>
